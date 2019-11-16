@@ -103,25 +103,22 @@ public function index(Request $request)
   }
  public function update(Request $request)
   {
-     // Validationをかける
+      // Validationをかける
       $this->validate($request, Profile::$rules);
       // News Modelからデータを取得する
       $profile = Profile::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profile_form = $request->all();
-      
-      if (isset($profile_form['image1'])) {
-        $path = $request->file('image1')->store('public/image');
-        //var_dump($path);
-        //exit();
-        $profile->image_path1 = basename($path);
-        unset($profile_form['image1']);
+      if (isset($profile_form['image'])) {
+        $path = $request->file('image')->store('public/image');
+        $profile->image_path = basename($path);
+    
+        unset($profile_form['image']);
       } elseif (isset($request->remove)) {
-        $profile->image_path1 = null;
-        unset($profile_form['remove1']);
+        $profile->image_path = null;
+        unset($profile_form['remove']);
       }
       unset($profile_form['_token']);
-
       // 該当するデータを上書きして保存する
       $profile->fill($profile_form)->save();
 

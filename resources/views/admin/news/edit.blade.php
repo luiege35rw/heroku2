@@ -15,7 +15,7 @@
                         </ul>
                     @endif
                       <div class="form-group row">
-                        <label class="col-md-2" for="title">車種</label>
+                        <label class="col-md-2" for="model">車種</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="title" value="{{ $news_form->model }}">
                         </div>
