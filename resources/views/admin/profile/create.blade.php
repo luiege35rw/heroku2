@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', '愛社自慢プロフィールの新規作成')
+@section('title', '愛車自慢プロフィールの新規作成')
 
 @section('content')
     <div class="container">
@@ -82,7 +82,6 @@
                             <input type="file" class="form-control-file" name="image6">
                         </div>
                     </div>
-                    
         {{ csrf_field() }}
         　　　　　　　　　　　　　　<div class="form-group row">
                             <input type="submit" class="btn btn-primary" value="更新">

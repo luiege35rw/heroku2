@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', '愛社自慢プロフィールの編集')
+@section('title', '愛車自慢プロフィールの編集')
 
 @section('content')
     <div class="container">
@@ -45,17 +45,12 @@
                        <label class="col-md-2">自己紹介</label>
                     <div class="col-md-10">
                             <textarea class="form-control" name="introduction" rows="20">{{ $profile_form->introduction }}</textarea>
-                    </div>
                     <div class="form-group row">
-                　      <label class="col-md-2">画像1</label>
+            　        <label class="col-md-2">画像1</label>
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image1">
-                            @if ($profile_form->image_path1)
-                                        <img src="{{ asset('storage/image/' . $profile_form->image_path1) }}">
-                         @endif
+                                         
                         </div>
-                        
-                        
                     </div>
                     <div class="form-group row">      
                      <label class="col-md-2">画像2</label>
@@ -81,6 +76,18 @@
                             <input type="file" class="form-control-file" name="image5">
                         </div>
                     </div>
+                    <div class="form-group row">
+                     <label class="col-md-2">画像6</label>
+                        <div class="col-md-10">
+                            <input type="file" class="form-control-file" name="image6">
+                        </div>
+                    </div>
+                            設定中: {{ $profile_form->image_path }}
+                        </div>
+                         <div class="form-check-label">
+                     <input type="checkbox" class="form-check-input" name="remove" value="true">画像を削除
+                         </div>
+                        </div>
                     
         {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">

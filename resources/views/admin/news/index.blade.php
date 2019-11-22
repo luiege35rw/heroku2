@@ -32,15 +32,17 @@
                         <thead>
                             <tr>
                                 <th width="10%">ID</th>
+                                <th width="20%">車種</th>
                                 <th width="20%">タイトル</th>
                                 <th width="50%">本文</th>
                                 <th width="10%">操作</th>
-                            </tr>
+                             </tr>
                         </thead>
                         <tbody>
                             @foreach($posts as $news)
                                 <tr>
                                     <th>{{ $news->id }}</th>
+                                    <td>{{ str_limit($news->model, 100) }}</td>
                                     <td>{{ str_limit($news->title, 100) }}</td>
                                     <td>{{ str_limit($news->body, 250) }}</td>
                                     <td>

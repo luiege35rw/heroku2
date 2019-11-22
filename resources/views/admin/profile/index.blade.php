@@ -33,7 +33,7 @@
                             <tr>
                                 <th width="10%">ID</th>
                                 <th width="20%">ニックネーム</th>
-                                <th width="20%">車種</th>
+                                <th width="20%">愛車遍歴</th>
                                 <th width="20%">ドライブスポット</th>
                                 <th width="50%">自己紹介</th>
                                 <th width="10%">操作</th>
@@ -44,8 +44,8 @@
                                 <tr>
                                     <th>{{ $profile->id }}</th>
                                     <td>{{ \Str::limit($profile->name, 100) }}</td>
-                                    <td>{{ \Str::limit($profile->gender, 100) }}</td>
-                                    <td>{{ \Str::limit($profile->hobby, 100) }}</td>
+                                    <td>{{ \Str::limit($profile->modelhistory, 100) }}</td>
+                                    <td>{{ \Str::limit($profile->spot, 100) }}</td>
                                     <td>{{ \Str::limit($profile->introduction, 250) }}</td>
                                     <td>  
                                        <div>

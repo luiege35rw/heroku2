@@ -25,6 +25,7 @@ class CreateProfilesTable extends Migration
             $table->string('image_path3')->nullable();
             $table->string('image_path4')->nullable();
             $table->string('image_path5')->nullable();
+            $table->string('image_path6')->nullable();
             $table->timestamps();
         });
     }

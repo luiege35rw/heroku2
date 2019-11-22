@@ -17,7 +17,7 @@
                       <div class="form-group row">
                         <label class="col-md-2" for="model">車種</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ $news_form->model }}">
+                            <input type="text" class="form-control" name="model" value="{{ $news_form->model }}">
                         </div>
                     </div>
                     <div class="form-group row">

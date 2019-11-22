@@ -33,7 +33,7 @@ class ProfileController extends Controller
       }
       if (isset($form['image1'])) {
           $path = $request->file('image1')->store('public/image');
-          $profile->image_path1 =stdClass;
+          // $profile->image_path1 =stdClass;
           $profile->image_path1 = basename($path);
       } else {
           $profile->image_path1 = null;
@@ -58,8 +58,14 @@ class ProfileController extends Controller
       }
       
       if (isset($form['image5'])) {
-        $path = $request->file('image5')->store('public/image');
-        $profile->image_path5 = basename($path);
+          $path = $request->file('image5')->store('public/image');
+          $profile->image_path5 = basename($path);
+      } else {
+          $profile->image_path5 = null;
+      }
+      if (isset($form['image6'])) {
+          $path = $request->file('image6')->store('public/image');
+          $profile->image_path5 = basename($path);
       } else {
           $profile->image_path5 = null;
       }
@@ -73,7 +79,10 @@ class ProfileController extends Controller
       unset($form['image3']);
       unset($form['image4']);
       unset($form['image5']);
+      unset($form['image6']);
       // データベースに保存する
+      
+      
       //$profile->title = null;
       $profile->fill($form);
       $profile->save();
@@ -94,7 +103,7 @@ public function index(Request $request)
       }
  public function edit(Request $request)
   {
-      // News Modelからデータを取得する
+      // Profile Modelからデータを取得する
       $profile = Profile::find($request->id);
       if (empty($profile)) {
         abort(404);    
@@ -105,11 +114,12 @@ public function index(Request $request)
   {
       // Validationをかける
       $this->validate($request, Profile::$rules);
-      // News Modelからデータを取得する
+      // Profile Modelからデータを取得する
       $profile = Profile::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profile_form = $request->all();
-      if (isset($profile_form['image'])) {
+      
+   if (isset($profile_form['image'])) {
         $path = $request->file('image')->store('public/image');
         $profile->image_path = basename($path);
     
@@ -124,5 +134,14 @@ public function index(Request $request)
 
       return redirect('admin/profile');
   }
+     public function delete(Request $request)
+  {
+      // 該当するProfile Modelを取得
+      $profile = Profile::find($request->id);
+      // 削除する
+      $profile->delete();
+      return redirect('admin/profile/');
+  }  
+
 }
 
