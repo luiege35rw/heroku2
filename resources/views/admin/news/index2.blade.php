@@ -14,11 +14,14 @@
                                         <img src="{{ asset('storage/image/' . $headline->image_path) }}">
                                     @endif
                                 </div>
-                                <div class="title p-2">
-                                    <h1>{{ str_limit($headline->title, 70) }}</h1>
+                                <div class="model p-2">
+                                    <h1>{{ str_limit($headline->model, 70) }}</h1>
                                 </div>
-                            </div>
-                        </div>
+                                 </div>
+                                 </div>
+                                <div class="title p-3">
+                                    <h2>{{ str_limit($headline->title, 70) }}</h2>
+                                </div>
                         <div class="col-md-6">
                             <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                         </div>

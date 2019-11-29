@@ -29,27 +29,32 @@
     <body>
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+              <div class="header-text-area">
+           <div class="menu1"> <a class="navbar-brand " href=""><i class="fas fa-home fa-lg"></i></a></div>
+           <div class="menu1"> <a href="" ><button class="pink "><i class="fas fa-camera"></i>写真から探す</button></a></div>
+           <div class="menu1"> <a class="nav-link"href=""><button class="pink "><i class="fa fa-automobile"></i>マイページ</button></a></div>
+           <div class="menu1"> <a class="nav-link"href="{{ route('register') }}"</a><button class="pink ">新規投稿</a></div>
+           <div class="menu2"> <a class="nav-link"href=""></a><button class="pink "><i class="fas fa-registered"></i>新規登録</a></div>
+           <div class="menu2"> <a class="nav-link"href="{{ route('login') }}"</a><button class="pink "><i class="fas fa-key"></i> ログイン</a></div>
+     </div>     
+     </div>
+     </header>
+     
+     
+     <h1>愛車時MAN</h1>
+     <p>～あの時こんな車に乗ってました～</p>
+     
+　　<div class="col-md-2">車種検索
+　　</div>
+　　
+　　<div class="col-md-8">
+        <input type="text" class="form-control" name="cond_title">
+    </div>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+　　　<div class="col-md-2">
+        <input type="submit" class="btn btn-primary" value="検索">
+    </div>
+    
             {{-- ここまでナビゲーションバー --}}
 
             <main class="py-4">

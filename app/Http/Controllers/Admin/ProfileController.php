@@ -5,6 +5,8 @@ use App\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
+
 class ProfileController extends Controller
 {
      public function add()
@@ -104,6 +106,7 @@ public function index(Request $request)
  public function edit(Request $request)
   {
       // Profile Modelからデータを取得する
+     //dd($request->id);
       $profile = Profile::find($request->id);
       if (empty($profile)) {
         abort(404);    
@@ -115,6 +118,8 @@ public function index(Request $request)
       // Validationをかける
       $this->validate($request, Profile::$rules);
       // Profile Modelからデータを取得する
+      // ここでnullになってる。
+       
       $profile = Profile::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profile_form = $request->all();
@@ -137,7 +142,7 @@ public function index(Request $request)
      public function delete(Request $request)
   {
       // 該当するProfile Modelを取得
-      $profile = Profile::find($request->id);
+ $profile = Profile::find($request->id);
       // 削除する
       $profile->delete();
       return redirect('admin/profile/');
