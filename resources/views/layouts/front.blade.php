@@ -27,11 +27,12 @@
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
+        <!--リンクが発動しない-->
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-              <div class="header-text-area">
+        　 <div class="header-text-area">
            <div class="menu1"> <a class="navbar-brand " href=""><i class="fas fa-home fa-lg"></i></a></div>
-           <div class="menu1"> <a href="" ><button class="pink "><i class="fas fa-camera"></i>写真から探す</button></a></div>
+           <div class="menu1"> <a href="" ><button class="pink "><i class="fas fa-camera"></i>写真ギャラリー</button></a></div>
            <div class="menu1"> <a class="nav-link"href=""><button class="pink "><i class="fa fa-automobile"></i>マイページ</button></a></div>
            <div class="menu1"> <a class="nav-link"href="{{ route('register') }}"</a><button class="pink ">新規投稿</a></div>
            <div class="menu2"> <a class="nav-link"href=""></a><button class="pink "><i class="fas fa-registered"></i>新規登録</a></div>
@@ -47,7 +48,7 @@
 　　<div class="col-md-2">車種検索
 　　</div>
 　　
-　　<div class="col-md-8">
+　　<div class="col-md-２">
         <input type="text" class="form-control" name="cond_title">
     </div>
 

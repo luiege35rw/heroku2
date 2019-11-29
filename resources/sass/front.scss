@@ -55,3 +55,56 @@ body {
     }
   }
 }
+//以下はstyle.cssから継承
+body {
+  margin: 0px;
+  padding-top: 0px;
+  background-color: #FFCCFF;
+}
+
+a .pink{
+  border:2px solid;
+  margin: 10px;
+  border-color:#aaaaaa #444444 #444444 #aaaaaa;
+  background-color:#FF00FF ;
+}
+
+button.pink {
+  font-size: 1.1em;
+  background-color:#FF00FF;
+}
+
+.header-text-area .menu1 {
+  float: left;
+}
+
+.header-text-area .menu2 {
+  float: right;
+}
+.header-text-area:after {
+ content: " ";
+ clear: both;
+}
+ 
+header {
+  margin: 0px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  background-color:#808080;
+}
+h1,h2,p {
+  text-align: center;
+}
+
+.col-md-2 {
+  text-align: center;
+}
+
+.col-md-8 {
+  text-align: center;
+}
+
+
+cond_title {
+  text-align: center;
+}
