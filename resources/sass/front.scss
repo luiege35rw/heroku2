@@ -39,7 +39,7 @@ body {
   .post {
     .date {
       font-size: 0.6em;
-      color: #999999;
+      color: #000000;
     }
     .title {
       font-size: 1.2em;
@@ -55,7 +55,8 @@ body {
     }
   }
 }
-//以下はstyle.cssから継承
+//以下はstyle.cssから継承 
+
 body {
   margin: 0px;
   padding-top: 0px;
@@ -88,8 +89,8 @@ button.pink {
  
 header {
   margin: 0px;
-  font-size: 1.2em;
-  line-height: 1.2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   background-color:#808080;
 }
 h1,h2,p {

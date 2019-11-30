@@ -24,11 +24,15 @@
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <!--<link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">-->
+        <link href="{{ asset('css/front.css') }}" rel="stylesheet">
     </head>
     <body>
         <!--リンクが発動しない-->
-        <div id="app">
+    <header>
+           <div id="app">
+           <h1>愛車時MAN</h1>
+           <p>～あの時こんな車に乗ってました～</p>
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
         　 <div class="header-text-area">
            <div class="menu1"> <a class="navbar-brand " href=""><i class="fas fa-home fa-lg"></i></a></div>
@@ -40,11 +44,6 @@
      </div>     
      </div>
      </header>
-     
-     
-     <h1>愛車時MAN</h1>
-     <p>～あの時こんな車に乗ってました～</p>
-     
 　　<div class="col-md-2">車種検索
 　　</div>
 　　
