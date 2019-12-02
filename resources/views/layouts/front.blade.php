@@ -26,9 +26,11 @@
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <!--<link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">-->
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+        <!--FontAwesome5を使う-->
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     </head>
     <body>
-        <!--リンクが発動しない-->
+        
     <header>
            <div id="app">
            <h1>愛車時MAN</h1>
@@ -36,11 +38,11 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
         　 <div class="header-text-area">
            <div class="menu1"> <a class="navbar-brand " href=""><i class="fas fa-home fa-lg"></i></a></div>
-           <div class="menu1"> <a href="" ><button class="pink "><i class="fas fa-camera"></i>写真ギャラリー</button></a></div>
-           <div class="menu1"> <a class="nav-link"href=""><button class="pink "><i class="fa fa-automobile"></i>マイページ</button></a></div>
-           <div class="menu1"> <a class="nav-link"href="{{ route('register') }}"</a><button class="pink ">新規投稿</a></div>
-           <div class="menu2"> <a class="nav-link"href=""></a><button class="pink "><i class="fas fa-registered"></i>新規登録</a></div>
-           <div class="menu2"> <a class="nav-link"href="{{ route('login') }}"</a><button class="pink "><i class="fas fa-key"></i> ログイン</a></div>
+           <div class="menu1"> <a class="nav-link"href="" ><button class="pink "><i class="fas fa-camera"></i>写真ギャラリー</button></a></div>
+           <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/profile"><button class="pink "><i class="fa fa-automobile"></i>プロフベース</button></a></div>
+           <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/news"</a><button class="pink "><i class="fa fa-commenting-o"></i> NEWSベース</a></div>
+           <div class="menu2"> <form method="GET" action="{{ route('register') }}"><<button class="pink "><i class="fas fa-registered"></i>新規登録</div>
+           <div class="menu2"> <form method="GET" action="{{ route('login') }}"><button class="pink "><i class="fas fa-key"></i>ログイン</div>
      </div>     
      </div>
      </header>

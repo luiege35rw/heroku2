@@ -6,7 +6,7 @@
         <div class="row">
           <div class="form-group">
             
-   <p>アバター画像変更</p>
+   <p>アバター画像</p>
         <input type="file" name="image" id="user_avatar">
       </div>
             <div class="col-md-8 mx-auto">

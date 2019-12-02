@@ -1,6 +1,3 @@
-body {
-  color: #FFCCFF;
-}
 
 .header {
   .logo {
@@ -71,8 +68,10 @@ a .pink{
 }
 
 button.pink {
-  font-size: 1.1em;
-  background-color:#FF00FF;
+   border:2px solid;
+  margin: 10px;
+  border-color:#aaaaaa #444444 #444444 #aaaaaa;
+  background-color:#FF00FF ;
 }
 
 .header-text-area .menu1 {

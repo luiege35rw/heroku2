@@ -6,7 +6,7 @@
         <div class="row">
           <div class="form-group">
             
-   <p>アバター画像変更</p>
+   <p>アバター画像</p>
         <input type="file" name="image" id="user_avatar">
          <div class="form-text text-info">
                                 設定中: {{ $profile_form->image_path }}
