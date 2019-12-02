@@ -39,6 +39,8 @@
                                 <div class="date">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
+                                <div class="model">
+                                    {{ str_limit($post->title, 150) }}
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
