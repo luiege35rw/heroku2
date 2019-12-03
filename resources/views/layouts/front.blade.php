@@ -46,16 +46,10 @@
      </div>     
      </div>
      </header>
-　　<div class="col-md-2">車種検索
-　　</div>
-　　
-　　<div class="col-md-２">
-        <input type="text" class="form-control" name="cond_title">
-    </div>
-
-　　　<div class="col-md-2">
-        <input type="submit" class="btn btn-primary" value="検索">
-    </div>
+　
+　<form name="search_form" style="margin:10px" method="POST" action=".">
+<input type="text" name="search_string" style="width:900px"><input type="submit" value="検索">
+</form>
     
             {{-- ここまでナビゲーションバー --}}
 

@@ -1,58 +1,51 @@
-
-.header {
-  .logo {
-      width: 120px;
-      height: 82px;
-  }
+.header .logo {
+  width: 120px;
+  height: 82px;
 }
 
-.headline {
-  .caption {
-    position: relative;
-    width: 350px;
-    .image {
-      img {
-    width: 100%;
-      }
-    }
-    .title {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      h1 {
-    color: #fff;
-    font-size: 1.2em;
-      }
-    }
-    .body {
-      font-size: 0.8em;
-    }
-  }
+.headline .caption {
+  position: relative;
+  width: 350px;
 }
 
-.posts {
-  .post {
-    .date {
-      font-size: 0.6em;
-      color: #000000;
-    }
-    .title {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    .body {
-      font-size: 0.8em;
-    }
-    .image {
-      img {
-    width: 250px;
-      }
-    }
-  }
+.headline .caption .image img {
+  width: 100%;
 }
-//以下はstyle.cssから継承 
+
+.headline .caption .title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.headline .caption .title h1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.headline .caption .body {
+  font-size: 0.8em;
+}
+
+.posts .post .date {
+  font-size: 0.6em;
+  color: #000000;
+}
+
+.posts .post .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.posts .post .body {
+  font-size: 0.8em;
+}
+
+.posts .post .image img {
+  width: 250px;
+}
 
 body {
   margin: 0px;
@@ -60,18 +53,18 @@ body {
   background-color: #FFCCFF;
 }
 
-a .pink{
-  border:2px solid;
+a .pink {
+  border: 2px solid;
   margin: 10px;
-  border-color:#aaaaaa #444444 #444444 #aaaaaa;
-  background-color:#FF00FF ;
+  border-color: #aaaaaa #444444 #444444 #aaaaaa;
+  background-color: #FF00FF;
 }
 
 button.pink {
-   border:2px solid;
+  border: 2px solid;
   margin: 10px;
-  border-color:#aaaaaa #444444 #444444 #aaaaaa;
-  background-color:#FF00FF ;
+  border-color: #aaaaaa #444444 #444444 #aaaaaa;
+  background-color: #FF00FF;
 }
 
 .header-text-area .menu1 {
@@ -81,18 +74,22 @@ button.pink {
 .header-text-area .menu2 {
   float: right;
 }
+
 .header-text-area:after {
- content: " ";
- clear: both;
+  content: " ";
+  clear: both;
 }
- 
+
 header {
   margin: 0px;
   font-size: 1.5em;
   line-height: 1.5em;
-  background-color:#808080;
+  background-color: #808080;
 }
-h1,h2,p {
+
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -103,7 +100,6 @@ h1,h2,p {
 .col-md-8 {
   text-align: center;
 }
-
 
 cond_title {
   text-align: center;
