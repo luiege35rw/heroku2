@@ -87,21 +87,5 @@ header {
   background-color: #808080;
 }
 
-h1,
-h2,
-p {
-  text-align: center;
-}
 
-.col-md-2 {
-  text-align: center;
-}
-
-.col-md-8 {
-  text-align: center;
-}
-
-cond_title {
-  text-align: center;
-}
 

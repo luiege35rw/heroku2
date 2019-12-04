@@ -47,6 +47,8 @@
   width: 250px;
 }
 
+// ナビゲーションページ
+
 body {
   margin: 0px;
   padding-top: 0px;
@@ -93,14 +95,15 @@ p {
   text-align: center;
 }
 
-.col-md-2 {
-  text-align: center;
+#body-inside{
+overflow-x: hidden;
 }
-
-.col-md-8 {
-  text-align: center;
+.orverwidth{
+margin:0 -200%;
+padding:0 200%;
+background: linear-gradient(#ffffff 0%, #ff6666 100%);
+text-align: center;
 }
-
-cond_title {
-  text-align: center;
+.orverwidth p{
+padding:1em;
 }
