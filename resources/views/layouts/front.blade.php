@@ -48,7 +48,7 @@
      </header>
 　
 　<form name="search_form" style="margin:10px" method="POST" action=".">
-<input type="text" name="search_string" style="width:900px"><input type="submit" value="検索">
+<input type="text" name="search_string" style="width:1220px"><input type="submit" value="検索">
 </form>
     
             {{-- ここまでナビゲーションバー --}}
