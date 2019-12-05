@@ -13,8 +13,8 @@
                                 <div class="date">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
-                                <div class="name">
-                                    {{ str_limit($post->title, 150) }}
+                                <div class="name mt-3">
+                                    {{ str_limit($post->name, 1500) }}
                                 </div>
                                 <div class="body mt-3">
                                     {{ str_limit($post->modelhistory, 1500) }}
@@ -22,10 +22,13 @@
                                 <div class="body mt-3">
                                     {{ str_limit($post->spot, 1500) }}
                                 </div>
+                                 <div class="introduction mt-3">
+                                    {{ str_limit($post->introduction, 1500) }}
+                                </div>
                             </div>
                             <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)
-                                    <img src="{{ $post->image_path }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
                                 @endif
                             </div>
                         </div>

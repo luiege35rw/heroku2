@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.headline .caption .title {
+.headline .caption .model {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -20,7 +20,7 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.headline .caption .title h1 {
+.headline .caption .model h1 {
   color: #fff;
   font-size: 1.2em;
 }
@@ -34,7 +34,7 @@
   color: #000000;
 }
 
-.posts .post .title {
+.posts .post .model h1 {
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -45,6 +45,10 @@
 
 .posts .post .image img {
   width: 250px;
+}
+
+.text-right.mt-3 {
+  float: right;
 }
 
 body {
@@ -87,5 +91,25 @@ header {
   background-color: #808080;
 }
 
+h1,
+h2,
+p {
+  text-align: center;
+}
 
+#body-inside {
+  overflow-x: hidden;
+}
+
+.orverwidth {
+  margin: 0 -200%;
+  padding: 0 200%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ff6666));
+  background: linear-gradient(#ffffff 0%, #ff6666 100%);
+  text-align: center;
+}
+
+.orverwidth p {
+  padding: 1em;
+}
 
