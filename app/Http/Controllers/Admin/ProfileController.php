@@ -85,7 +85,7 @@ class ProfileController extends Controller
       // データベースに保存する
       
       
-      //$profile->title = null;
+      $profile->title = null;
       $profile->fill($form);
       $profile->save();
 
