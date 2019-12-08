@@ -21,21 +21,17 @@ class ProfileController extends Controller
       $form = $request->all();
 
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
+      // パターン2　フォームから画像が送信されてきたら、保存して、$profile_id->image_path に画像のパスを保存する
+      
+      
       if (isset($form['image'])) {
       $path = $request->file('image')->store('public/image');
       $profile->image_path = basename($path);
       } else {
           $profile->image_path = null;
       }
-      if (isset($form['image'])) {
-          $path = $request->file('image')->store('public/image');
-          $profile->image_path = basename($path);
-      } else {
-          $profile->image_path = null;
-      }
       if (isset($form['image1'])) {
           $path = $request->file('image1')->store('public/image');
-          // $profile->image_path1 =stdClass;
           $profile->image_path1 = basename($path);
       } else {
           $profile->image_path1 = null;
@@ -67,9 +63,9 @@ class ProfileController extends Controller
       }
       if (isset($form['image6'])) {
           $path = $request->file('image6')->store('public/image');
-          $profile->image_path5 = basename($path);
+          $profile->image_path6 = basename($path);
       } else {
-          $profile->image_path5 = null;
+          $profile->image_path6 = null;
       }
 
             // フォームから送信されてきた_tokenを削除する

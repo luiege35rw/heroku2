@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-        
         <hr color="#c0c0c0">
         <div class="row">
             <div class="posts col-md-8 mx-auto mt-3">
@@ -29,6 +28,12 @@
                             <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path1) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path2) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path3) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path4) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path5) }}">
+                                    <img src="{{ asset('storage/image/' . $post->image_path6) }}">
                                 @endif
                             </div>
                         </div>

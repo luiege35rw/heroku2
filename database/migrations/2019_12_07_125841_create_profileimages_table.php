@@ -14,8 +14,8 @@ class CreateProfileimagesTable extends Migration
     public function up()
     {
         Schema::create('profileimages', function (Blueprint $table) {
-            $table->bigIncrements('profile_id');
-            $table->integer('id');
+            $table->bigIncrements('id');
+            $table->integer('profile_id');
             $table->string('image_path')->nullable();
             $table->string('image_path1')->nullable();
             $table->string('image_path2')->nullable();
