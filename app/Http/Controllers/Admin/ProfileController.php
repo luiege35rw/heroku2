@@ -15,6 +15,7 @@ class ProfileController extends Controller
     }
  public function create(Request $request)
   {
+    // dd($request);
       $this->validate($request, Profile::$rules);
 
       $profile = new  Profile;
@@ -81,10 +82,10 @@ class ProfileController extends Controller
       // データベースに保存する
       
       
-      $profile->title = null;
+      // $profile->title = null;
       $profile->fill($form);
       $profile->save();
-
+   
       return redirect('admin/profile/create');
   }
 public function index(Request $request)

@@ -14,5 +14,17 @@ class Profile extends Model
         'spot' => 'required',
         'introduction' => 'required',
     );
-    protected $fillable = ['name','modelhistory','spot','introduction'];
+    protected $fillable = [
+        'name',
+        'modelhistory',
+        'spot',
+        'introduction',
+        'image_path',
+        'image_path1',
+        'image_path2',
+        'image_path3',
+        'image_path4',
+        'image_path5',
+        'image_path6',
+    ];
 }
