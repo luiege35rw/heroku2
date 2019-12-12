@@ -24,4 +24,21 @@ class NewsController extends Controller
         // また View テンプレートに headline、 posts、という変数を渡している
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);
     }
+    // ハイライト検索
+    
+   public function sublinhamos($text, $words) {
+    $wordsArray = array();
+    $markedWords = array();
+    // explode the phrase in words
+    $wordsArray = explode(' ', $words); 
+
+    foreach ($wordsArray as $k => $word) {
+      $markedWords[$k]='<mark>'.$word.'</mark>';
+    }
+
+    $text = str_ireplace($wordsArray, $markedWords, $text);
+
+    //right trows results
+    return $text;
+}
 }

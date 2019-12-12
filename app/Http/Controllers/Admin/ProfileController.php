@@ -24,50 +24,52 @@ class ProfileController extends Controller
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
       // パターン2　フォームから画像が送信されてきたら、保存して、$profile_id->image_path に画像のパスを保存する
       
-      
+     
       if (isset($form['image'])) {
       $path = $request->file('image')->store('public/image');
       $profile->image_path = basename($path);
       } else {
           $profile->image_path = null;
       }
-      if (isset($form['image1'])) {
-          $path = $request->file('image1')->store('public/image');
-          $profile->image_path1 = basename($path);
-      } else {
-          $profile->image_path1 = null;
+      for ($i = 1;$i <= 6; $i ++) {
+          if (isset($form['image' . $i])) {
+              $path = $request->file('image' . $i)->store('public/image');
+              $profile->{'image_path' . $i} = basename($path);
+          } else {
+              $profile->{'image_path' . $i} = null;
+          }
       }
-      if (isset($form['image2'])) {
-          $path = $request->file('image2')->store('public/image');
-          $profile->image_path2 = basename($path);
-      } else {
-          $profile->image_path2 = null;
-      }
-      if (isset($form['image3'])) {
-          $path = $request->file('image3')->store('public/image');
-          $profile->image_path3 = basename($path);
-      } else {
-          $profile->image_path3 = null;
-      }
-      if (isset($form['image4'])) {
-          $path = $request->file('image4')->store('public/image');
-          $profile->image_path4 = basename($path);
-      } else {
-          $profile->image_path4 = null;
-      }
+      // if (isset($form['image2'])) {
+      //     $path = $request->file('image2')->store('public/image');
+      //     $profile->image_path2 = basename($path);
+      // } else {
+      //     $profile->image_path2 = null;
+      // }
+      // if (isset($form['image3'])) {
+      //     $path = $request->file('image3')->store('public/image');
+      //     $profile->image_path3 = basename($path);
+      // } else {
+      //     $profile->image_path3 = null;
+      // }
+      // if (isset($form['image4'])) {
+      //     $path = $request->file('image4')->store('public/image');
+      //     $profile->image_path4 = basename($path);
+      // } else {
+      //     $profile->image_path4 = null;
+      // }
       
-      if (isset($form['image5'])) {
-          $path = $request->file('image5')->store('public/image');
-          $profile->image_path5 = basename($path);
-      } else {
-          $profile->image_path5 = null;
-      }
-      if (isset($form['image6'])) {
-          $path = $request->file('image6')->store('public/image');
-          $profile->image_path6 = basename($path);
-      } else {
-          $profile->image_path6 = null;
-      }
+      // if (isset($form['image5'])) {
+      //     $path = $request->file('image5')->store('public/image');
+      //     $profile->image_path5 = basename($path);
+      // } else {
+      //     $profile->image_path5 = null;
+      // }
+      // if (isset($form['image6'])) {
+      //     $path = $request->file('image6')->store('public/image');
+      //     $profile->image_path6 = basename($path);
+      // } else {
+      //     $profile->image_path6 = null;
+      // }
 
             // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
@@ -130,6 +132,18 @@ public function index(Request $request)
         $profile->image_path = null;
         unset($profile_form['remove']);
       }
+      // ループ処理
+      for ($i = 1;$i <= 6; $i++) {
+          if (isset($profile_form['image' . $i])) {
+              $path = $request->file('image' . $i)->store('public/image');
+              $profile->{'image_path' . $i} = basename($path);
+              unset($profile_form['image' . $i]);
+          } elseif (isset($request->{'remove' . $i})) {
+              $profile->{'image_path' . $i} = null;
+              unset($profile_form['remove' . $i]);
+          }
+      }
+        
       unset($profile_form['_token']);
       // 該当するデータを上書きして保存する
       $profile->fill($profile_form)->save();
