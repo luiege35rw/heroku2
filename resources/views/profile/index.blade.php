@@ -25,11 +25,11 @@
                                     {{ str_limit($post->introduction, 1500) }}
                                 </div>
                             </div>
-                            <div class="image col-md-6 text-right mt-4">
+                            
+                            <div style="float:left"　class="image col-md-4">
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
-                                 
-                                @endif
+                                 @endif
                                 @for ($i =1; $i <= 6; $i++)
                                     @if ($post->{'image_path' . $i})
                                         <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}">
