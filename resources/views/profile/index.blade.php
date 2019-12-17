@@ -25,8 +25,9 @@
                                     {{ str_limit($post->introduction, 1500) }}
                                 </div>
                             </div>
-                            
-                            <div style="float:left"　class="image col-md-4">
+                            <!--<div class="image col-md-6 text-left md-4">-->
+                            <div style="flex;"　class="image col-md-4">
+                            <!--<div style="clear both"  class="image col-md-4">-->
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
                                  @endif
