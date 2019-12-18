@@ -41,12 +41,12 @@
            <div class="menu1"> <a class="nav-link"href="https://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/_static/index.html/Aishajiman.html/index.html" ><button class="pink "><i class="fas fa-camera"></i>写真BOX</button></a></div>
            <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
            <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
-           <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>新規登録</div>
-           <div class="menu2"> <form method="GET" action="{{ route('login') }}"><button class="pink "><i class="fas fa-key"></i>ログイン</div>
-     </div>     
-     </div>
-     </header>
-<form name="search_form" style="margin:10px" method="POST" action=".">
+           <div class="menu2"> <a class="nav-link"href="https://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/_static/index.html/Aishajiman.html/information.html"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
+               <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
+           </div>     
+           </div>
+    </header>
+<!--<form name="search_form" style="margin:10px" method="POST" action=".">-->
 <input type="text" name="search_string" style="width:2000px"><input type="submit" value="検索">
 </form>
      </div>
