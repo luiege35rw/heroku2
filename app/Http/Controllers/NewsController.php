@@ -33,7 +33,7 @@ class NewsController extends Controller
     $wordsArray = explode(' ', $words); 
 
     foreach ($wordsArray as $k => $word) {
-      $markedWords[$k]='<mark>'.$word.'</mark>';
+      $markedWords[$post]='<mark>'.$word.'</mark>';
     }
 
     $text = str_ireplace($wordsArray, $markedWords, $text);

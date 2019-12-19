@@ -46,7 +46,7 @@
            </div>     
            </div>
     </header>
-<!--<form name="search_form" style="margin:10px" method="POST" action=".">-->
+<form name="search_form" style="margin:10px" method="POST" action=".">
 <input type="text" name="search_string" style="width:2000px"><input type="submit" value="検索">
 </form>
      </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\News;
+use App\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class NewsController extends Controller
@@ -58,7 +59,8 @@ class NewsController extends Controller
       if (empty($news)) {
         abort(404);    
       }
-      return view('admin.news.edit', ['news_form' => $news]);
+        $profile = Profile::all();
+      return view('admin.news.edit', ['news_form' => $news,'profiles' => $profile]);
   }
 
 

@@ -28,18 +28,27 @@
                             <div class="image col-md-6 text-right md-4">
                             
                             <!--<div style="float:left;"　class="image col-md-4">-->
-                            <!--<div style="flex"  class="image col-md-4">-->
+                            <!--<div style="clear:left;"  class="image col-md-4">-->
+                             
+                                 
                              
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
                                  @endif
-                                @for ($i =1; $i <= 6; $i++)
-                                    @if ($post->{'image_path' . $i})
-                                        <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}">
-                                    @endif
-                                @endfor
+                             
                             </div>
                         </div>
+                        <div>
+                            @for ($i =1; $i <= 6; $i++)
+                            @if ($post->{'image_path' . $i})
+                                <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                            @endif
+                            @endfor
+                        </div>
+                        
+                        
+                        
+                        
                     </div>
                     <hr color="#c0c0c0">
                 @endforeach

@@ -54,6 +54,7 @@
                        <label class="col-md-2">自己紹介</label>
                     <div class="col-md-10">
                             <textarea class="form-control" name="introduction" rows="20">{{ $profile_form->introduction }}</textarea>
+                            <!--//ループ処理-->
                             @for ($i = 1;$i <= 6; $i ++)
                             <div class="form-group row">
                                 <label class="col-md-2">画像{{$i}}</label>
