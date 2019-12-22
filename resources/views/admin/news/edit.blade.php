@@ -14,12 +14,14 @@
                             @endforeach
                         </ul>
                     @endif
+                    <!--プロフィールのデータをプルダウンメニューに所得-->
                       <div class="form-group row">
                         <label class="col-md-2" for="profile_id">プロフィール</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="profile_id" value="{{ $news_form->profile_id }}">
                             {{Form::select('number', $profiles, $news_form->profile_id)}}
                         </div>
+                        
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="model">車種</label>

@@ -14,3 +14,11 @@ class News extends Model
     
     protected $fillable = ['model','title','body'];
 }
+//プルダウンメニュー用の配列
+  $profile = [
+        ''      => '選択してください' ,
+        'name' => 'name' ,
+        'modelhistory'   => 'modelhistory' ,
+        'spot,' => 'spot,' ,
+        'introduction,' => 'introduction,' ,
+    ];

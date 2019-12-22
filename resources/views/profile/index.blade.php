@@ -27,16 +27,10 @@
                             </div>
                             <div class="image col-md-6 text-right md-4">
                             
-                            <!--<div style="float:left;"　class="image col-md-4">-->
-                            <!--<div style="clear:left;"  class="image col-md-4">-->
-                             
-                                 
-                             
-                                @if ($post->image_path)
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                              @if ($post->image_path)
+                                    <img src="{{ asset('storage/image/' . $post->image_path) }}" style="max-width:300px;max-hight:200px">
                                  @endif
-                             
-                            </div>
+                             </div>
                         </div>
                         <div>
                             @for ($i =1; $i <= 6; $i++)

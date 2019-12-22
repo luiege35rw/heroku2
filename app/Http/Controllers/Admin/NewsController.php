@@ -59,9 +59,12 @@ class NewsController extends Controller
       if (empty($news)) {
         abort(404);    
       }
+      // プロフィールのデータをNEWSの編集ページ内に渡す
         $profile = Profile::all();
       return view('admin.news.edit', ['news_form' => $news,'profiles' => $profile]);
   }
+  
+
 
 
   public function update(Request $request)
