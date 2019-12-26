@@ -64,7 +64,10 @@
                             </div>
                             <div class="form-text text-info">
                                 設定中: {{ $profile_form->{'image_path' . $i} }}
+                    <!--ライトボックス          
+                    <a href=“https://drive.google.com/file/d/18PlJXYqeXRa5vygsXaQjX_wla7_D89wB/view” data-lightbox=“アリスト” data-title=“プロフィールフォト”><img src=“images” /></a>-->
                             </div>
+                            
                             <div class="form-check">
                                 <label class="form-check-label">
                                 <input type="checkbox" class="form-check-input" name="remove{{$i}}" value="true">画像を削除

@@ -14,7 +14,7 @@ class AddProfileIdToNewsTable extends Migration
     public function up()
     {
         Schema::table('news', function (Blueprint $table) {
-            $table->bigIncrements('profile_id');
+            $table->bigInteger('profile_id');
         });
     }
 

@@ -12,7 +12,12 @@ class News extends Model
         'body' => 'required',
     );
     
-    protected $fillable = ['model','title','body'];
+    protected $fillable = ['model','title','body','profile_id'];
+    
+    public function profile()
+    {
+      return $this->hasOne('App\Profile');
+    }
 }
 //プルダウンメニュー用の配列
   $profile = [

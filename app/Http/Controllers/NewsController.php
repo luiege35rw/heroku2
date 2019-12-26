@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\HTML;
 
 // 追記
 use App\News;
+use App\Profile;
+
 
 class NewsController extends Controller
 {
@@ -19,26 +21,37 @@ class NewsController extends Controller
         } else {
             $headline = null;
         }
-
+        \Log::debug(__LINE__.' '.__FILE__.' '.print_r($posts, true));
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);
     }
-    // ハイライト検索
     
-   public function sublinhamos($text, $words) {
-    $wordsArray = array();
-    $markedWords = array();
-    // explode the phrase in words
-    $wordsArray = explode(' ', $words); 
+    //   public function profile()
+    // {
+    //   return $this->hasOne(Profile::class,'foreign_key','id');
 
-    foreach ($wordsArray as $k => $word) {
-      $markedWords[$post]='<mark>'.$word.'</mark>';
-    }
-
-    $text = str_ireplace($wordsArray, $markedWords, $text);
-
-    //right trows results
-    return $text;
+    // }
 }
-}
+    
+    
+    
+    
+//     // ハイライト検索
+    
+//   public function sublinhamos($text, $words) {
+//     $wordsArray = array();
+//     $markedWords = array();
+//     // explode the phrase in words
+//     $wordsArray = explode(' ', $words); 
+
+//     foreach ($wordsArray as $k => $word) {
+//       $markedWords[$post]='<mark>'.$word.'</mark>';
+//     }
+
+//     $text = str_ireplace($wordsArray, $markedWords, $text);
+
+//     //right trows results
+//     return $text;
+// }
+// }

@@ -26,7 +26,6 @@
                                 </div>
                             </div>
                             <div class="image col-md-6 text-right md-4">
-                            
                               @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}" style="max-width:300px;max-hight:200px">
                                  @endif

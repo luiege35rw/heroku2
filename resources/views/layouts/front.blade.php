@@ -28,7 +28,12 @@
         <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
         <!--FontAwesome5を使う-->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <!--ライトボックスを使う-->
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+　　　　<link href="common/css/lightbox.css" type="text/css" rel="stylesheet" media="all" />
     </head>
+    <!--ライトボックスを使う-->
+    <script src="common/js/lightbox.js" type="text/javascript"></script>
     <body>
         
     <header>
