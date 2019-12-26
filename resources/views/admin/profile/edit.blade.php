@@ -21,7 +21,7 @@
             <div class="col-md-8 mx-auto">
                 <h2>愛車自慢プロフィール編集</h2>
                
-
+あああ
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
