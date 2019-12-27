@@ -31,29 +31,29 @@
           
             <!--プロフィール情報を表示する-->
             <div class="name mt-3">
-                    {{ str_limit($headline->name, 150) }}
+                    {{ str_limit($headline->profile->name, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->model, 150) }}
+                    {{ str_limit($headline->profile->model, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->spot, 150) }}
+                    {{ str_limit($headline->profile->spot, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->introduction, 1500) }}
+                    {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
                                   <!--写真投稿ループ-->
                  @if ($headline->image_path)
-                     <img src="{{ asset('storage/image/' . $headline->image_path) }}" style="max-width:300px;max-hight:200px">
+                     <img src="{{ asset('storage/image/' . $headline->profile->image_path) }}" style="max-width:300px;max-hight:200px">
                  @endif
              </div>
             </div>
             <div>
                 @for ($i =1; $i <= 6; $i++)
-                @if ($headline->{'image_path' . $i})
-                    <img src="{{ asset('storage/image/' . $headline->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
-                    @endif--
+                @if ($headline->profile->{'image_path' . $i})
+                    <img src="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    @endif
                 @endfor
             </div>
         @endif
@@ -107,6 +107,7 @@
              </div>
             </div>
             <div>
+            
             
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})
