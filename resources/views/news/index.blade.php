@@ -31,16 +31,16 @@
           
             <!--プロフィール情報を表示する-->
             <div class="name mt-3">
-                    {{ str_limit($headline->profile->name, 150) }}
+                    {{ str_limit($headline->name, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->profile->model, 150) }}
+                    {{ str_limit($headline->model, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->profile->spot, 150) }}
+                    {{ str_limit($headline->spot, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->profile->introduction, 1500) }}
+                    {{ str_limit($headline->introduction, 1500) }}
              </div>
              
                                   <!--写真投稿ループ-->
@@ -52,8 +52,8 @@
             <div>
                 @for ($i =1; $i <= 6; $i++)
                 @if ($headline->{'image_path' . $i})
-                    <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
-                    @endif
+                    <img src="{{ asset('storage/image/' . $headline->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    @endif--
                 @endfor
             </div>
         @endif
@@ -99,16 +99,18 @@
                     {{ str_limit($post->profile->introduction, 1500) }}
              </div>
              <div class="image col-md-6 text-right md-4">
+                 
                                         <!--写真投稿ループ-->
                  @if ($post->image_path)
-                     <img src="{{ asset('storage/image/' . $post->image_path) }}" style="max-width:300px;max-hight:200px">
+                     <img src="{{ asset('storage/image/' . $post->profile->image_path) }}" style="max-width:300px;max-hight:200px">
                  @endif
              </div>
             </div>
             <div>
+            
                 @for ($i =1; $i <= 6; $i++)
-                @if ($post->{'image_path' . $i})
-                    <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                @if ($post->profile->{'image_path' . $i})
+                    <img src="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
                     @endif
                 @endfor
             </div>
