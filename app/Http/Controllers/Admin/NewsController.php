@@ -60,8 +60,8 @@ class NewsController extends Controller
         abort(404);    
       }
       // プロフィールのデータをNEWSの編集ページ内に渡す
-        $profile = Profile::select('id','name','spot','introduction')->get();
-        $profile_list = $profile->pluck('name','id','spot','introduction');
+        $profile = Profile::select('id','name')->get();
+        $profile_list = $profile->pluck('name','id');
       return view('admin.news.edit', ['news_form' => $news,'profiles' => $profile_list]);
   }
   

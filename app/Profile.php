@@ -14,6 +14,12 @@ class Profile extends Model
         'spot' => 'required',
         'introduction' => 'required',
     );
+    public function news()
+{
+    return $this->hasMany('App\News');
+}
+    
+    
     protected $fillable = [
         'name',
         'modelhistory',

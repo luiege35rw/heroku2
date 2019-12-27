@@ -56,6 +56,10 @@
                             </div>
                         </div>
                     </div>
+                    {{ $post->profile->name, 1500 }}
+                    {{ $post->profile->modelhistory, 1500}}
+                    {{ $post->profile->spot, 1500 }}
+                    {{ $post->profile->introduction, 1500 }}
                     <hr color="#c0c0c0">
                 @endforeach
             </div>

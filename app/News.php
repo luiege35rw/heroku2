@@ -16,7 +16,7 @@ class News extends Model
     
     public function profile()
     {
-      return $this->hasOne('App\Profile');
+      return $this->belongsTo('App\Profile');
     }
 }
 //プルダウンメニュー用の配列
