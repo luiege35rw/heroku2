@@ -28,6 +28,34 @@
                     </div>
                 </div>
             </div>
+          
+            <!--プロフィール情報を表示する-->
+            <div class="name mt-3">
+                    {{ str_limit($headline->profile->name, 150) }}
+             </div>
+              <div class="name mt-3">
+                    {{ str_limit($headline->profile->model, 150) }}
+             </div>
+              <div class="name mt-3">
+                    {{ str_limit($headline->profile->spot, 150) }}
+             </div>
+              <div class="name mt-3">
+                    {{ str_limit($headline->profile->introduction, 1500) }}
+             </div>
+             
+                                  <!--写真投稿ループ-->
+                 @if ($headline->image_path)
+                     <img src="{{ asset('storage/image/' . $headline->image_path) }}" style="max-width:300px;max-hight:200px">
+                 @endif
+             </div>
+            </div>
+            <div>
+                @for ($i =1; $i <= 6; $i++)
+                @if ($headline->{'image_path' . $i})
+                    <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    @endif
+                @endfor
+            </div>
         @endif
         <hr color="#c0c0c0">
         <div class="row">
@@ -49,17 +77,42 @@
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
                             </div>
-                            <div class="image col-md-6 text-left mt-4">
+                            <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
                                 @endif
                             </div>
                         </div>
                     </div>
-                    {{ $post->profile->name, 1500 }}
-                    {{ $post->profile->modelhistory, 1500}}
-                    {{ $post->profile->spot, 1500 }}
-                    {{ $post->profile->introduction, 1500 }}
+    
+                    <!--プロフィール情報を表示する-->
+             <div class="name mt-3">
+                    {{ str_limit($post->profile->name, 150) }}
+             </div>
+             <div class="name mt-3">
+                    {{ str_limit($post->profile->modelhistory, 150) }}
+             </div>
+             <div class="name mt-3">
+                    {{ str_limit($post->profile->spot, 150) }}
+             </div>
+             <div class="name mt-3">
+                    {{ str_limit($post->profile->introduction, 1500) }}
+             </div>
+             <div class="image col-md-6 text-right md-4">
+                                        <!--写真投稿ループ-->
+                 @if ($post->image_path)
+                     <img src="{{ asset('storage/image/' . $post->image_path) }}" style="max-width:300px;max-hight:200px">
+                 @endif
+             </div>
+            </div>
+            <div>
+                @for ($i =1; $i <= 6; $i++)
+                @if ($post->{'image_path' . $i})
+                    <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    @endif
+                @endfor
+            </div>
+                
                     <hr color="#c0c0c0">
                 @endforeach
             </div>
