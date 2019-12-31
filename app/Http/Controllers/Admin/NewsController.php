@@ -10,11 +10,14 @@ class NewsController extends Controller
     
   public function add()
   {
-      return view('admin.news.create');
+     $profile = Profile::select('id','name')->get();
+      $profile_list = $profile->pluck('name','id');
+      return view('admin.news.create', ['profiles' => $profile_list]);
   }
   
    public function create(Request $request)
   {
+     \Debugbar::info($request);
       $this->validate($request, News::$rules);
 
       $news = new News;
@@ -84,6 +87,11 @@ class NewsController extends Controller
       } elseif (isset($request->remove)) {
         $news->image_path = null;
         unset($news_form['remove']);
+        
+         // プロフィールのデータをNEWSの新規ページ内に渡す
+        $profile = Profile::select('id','name')->get();
+        $profile_list = $profile->pluck('name','id');
+      return view('admin.news.create', ['news_form' => $news,'profiles' => $profile_list]);
       }
       unset($news_form['_token']);
       // 該当するデータを上書きして保存する
