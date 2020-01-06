@@ -29,11 +29,14 @@
         <!--FontAwesome5を使う-->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <!--ライトボックスを使う-->
-       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-　　　　<link href="common/css/lightbox.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+　　　  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+　　　  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+        <!--ハイライト検索を使う-->
+        <script type="text/javascript" src="jquery.js"></script>
+　　　　<script type="text/javascript" src="jquery-highlight-5s.js"></script>
     </head>
-    <!--ライトボックスを使う-->
-    <script src="common/js/lightbox.js" type="text/javascript"></script>
+  
     <body>
         
     <header>
@@ -55,7 +58,28 @@
 <input type="text" name="search_string" style="width:2000px"><input type="submit" value="検索">
 </form>
      </div>
-    
+     
+     <!--ライトボックス写真一覧-->
+ <a href="storage/image/bigimages1.jpg" data-lightbox="アリスト" data-title="車拡大写真"><img src="storage/image/images1_thumb.jpg" alt="アリスト"></a>
+<a href="storage/image/bigimages2.jpg" data-lightbox="クラウン210系" data-title="車拡大写真"><img src="storage/image/images2_thumb.jpg" alt="クラウン210系"></a>
+<a href="storage/image/bigimages3.jpg" data-lightbox="スカイラインR34" data-title="車拡大写真"><img src="storage/image/images3_thumb.jpg" alt="スカイラインR34"></a>
+<a href="storage/image/bigimages4.jpg" data-lightbox="チェイサー" data-title="車拡大写真"><img src="storage/image/images4_thumb.jpg" alt="チェイサー"></a>
+<a href="storage/image/bigimages5.jpg" data-lightbox="ノート" data-title="車拡大写真"><img src="storage/image/images5_thumb.jpg" alt="ノート"></a>
+<a href="storage/image/bigimages6.jpg" data-lightbox="ポルシェ911" data-title="車拡大写真"><img src="storage/image/images6_thumb.jpg" alt="ポルシェ911"></a>
+<a href="storage/image/bigimages7.jpg" data-lightbox="マツダロードスター" data-title="車拡大写真"><img src="storage/image/images7_thumb.jpg" alt="マツダロードスター"></a>
+<a href="storage/image/bigimages8.jpg" data-lightbox="ランドクルーザー" data-title="車拡大写真"><img src="storage/image/images8_thumb.jpg" alt="ランドクルーザー"></a>
+<a href="storage/image/bigimages9.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images9_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages10.jpg" data-lightbox="EKワゴン" data-title="車拡大写真"><img src="storage/image/images10_thumb.jpg" alt="EKワゴン"></a>
+<a href="storage/image/bigimages11.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images11_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages12.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images12_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages13.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images13_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages14.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images14_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages15.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images15_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages16.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images16_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages17.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images17_thumb.jpg" alt="ワゴンR"></a>
+<a href="storage/image/bigimages18.jpg" data-lightbox="ワゴンR" data-title="車拡大写真"><img src="storage/image/images18_thumb.jpg" alt="ワゴンR"></a>
+
+
             {{-- ここまでナビゲーションバー --}}
 
             <main class="py-4">

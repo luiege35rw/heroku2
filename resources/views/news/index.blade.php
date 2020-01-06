@@ -100,14 +100,14 @@
              </div>
              <div class="image col-md-6 text-right md-4">
                  
-                                        <!--写真投稿ループ-->
+                                        
                  @if ($post->image_path)
                      <img src="{{ asset('storage/image/' . $post->profile->image_path) }}" style="max-width:300px;max-hight:200px">
                  @endif
              </div>
             </div>
             <div>
-            
+                <!--写真投稿ループ-->
             
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})

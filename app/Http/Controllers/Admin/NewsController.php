@@ -79,7 +79,7 @@ class NewsController extends Controller
       $news = News::find($request->id);
       // 送信されてきたフォームデータを格納する
       $news_form = $request->all();
-      \Log::debug(__LINE__.' '.__FILE__.' '.print_r($news_form, true));
+      
       if (isset($news_form['image'])) {
         $path = $request->file('image')->store('public/image');
         $news->image_path = basename($path);
