@@ -43,26 +43,33 @@
                     {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
-                                  <!--写真投稿ループ-->
+                                  
                  @if ($headline->image_path)
+                 <a href="{{ asset('storage/image/' . $headline->profile->image_path) }}" data-lightbox="car">
                      <img src="{{ asset('storage/image/' . $headline->profile->image_path) }}" style="max-width:300px;max-hight:200px">
+                     </a>
                  @endif
              </div>
             </div>
             <div>
+                 
+                <!--写真投稿ループ-->
+            
                 @for ($i =1; $i <= 6; $i++)
                 @if ($headline->profile->{'image_path' . $i})
+                <a href="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" data-lightbox="car">
                     <img src="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    </a>
                     @endif
                 @endfor
             </div>
         @endif
         <hr color="#c0c0c0">
-        <div class="row">
+        <div class="row2">
             <div class="posts col-md-8 mx-auto mt-3">
                 @foreach($posts as $post)
-                    <div class="post">
-                        <div class="row">
+                    <div class="post" style="border:1px solid #000;">
+                        <div class="row2">
                             <div class="text col-md-6">
                                 <div class="date">
                                     {{ $post->updated_at->format('Y年m月d日') }}
@@ -77,6 +84,8 @@
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
                             </div>
+                        </div>
+                        <div class="row2">
                             <div class="image col-md-6 text-left mt-4">
                                 @if ($post->image_path)
                                     <img src="{{ asset('storage/image/' . $post->image_path) }}">
@@ -108,10 +117,14 @@
             </div>
             <div>
                 <!--写真投稿ループ-->
+                
+                   
             
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})
+                <a href="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" data-lightbox="car">
                     <img src="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                    </a>
                     @endif
                 @endfor
             </div>

@@ -54,10 +54,10 @@
            </div>     
            </div>
     </header>
-<form name="search_form" style="margin:10px" method="POST" action=".">
-<input type="text" name="search_string" style="width:2000px"><input type="submit" value="検索">
-</form>
-     </div>
+<!--<form name="search_form" style="margin:10px" method="POST" action=".">-->
+<!--<input type="text" name="search_string" style="width:1850px"><input type="submit" value="検索">-->
+<!--</form>-->
+<!--     </div>-->
      
      <!--ライトボックス写真一覧-->
  <a href="storage/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="storage/image/images1_thumb.jpg" alt="アリスト"></a>
