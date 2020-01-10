@@ -39,38 +39,7 @@ class ProfileController extends Controller
               $profile->{'image_path' . $i} = null;
           }
       }
-      // if (isset($form['image2'])) {
-      //     $path = $request->file('image2')->store('public/image');
-      //     $profile->image_path2 = basename($path);
-      // } else {
-      //     $profile->image_path2 = null;
-      // }
-      // if (isset($form['image3'])) {
-      //     $path = $request->file('image3')->store('public/image');
-      //     $profile->image_path3 = basename($path);
-      // } else {
-      //     $profile->image_path3 = null;
-      // }
-      // if (isset($form['image4'])) {
-      //     $path = $request->file('image4')->store('public/image');
-      //     $profile->image_path4 = basename($path);
-      // } else {
-      //     $profile->image_path4 = null;
-      // }
-      
-      // if (isset($form['image5'])) {
-      //     $path = $request->file('image5')->store('public/image');
-      //     $profile->image_path5 = basename($path);
-      // } else {
-      //     $profile->image_path5 = null;
-      // }
-      // if (isset($form['image6'])) {
-      //     $path = $request->file('image6')->store('public/image');
-      //     $profile->image_path6 = basename($path);
-      // } else {
-      //     $profile->image_path6 = null;
-      // }
-
+ 
             // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
       // フォームから送信されてきたimageを削除する
