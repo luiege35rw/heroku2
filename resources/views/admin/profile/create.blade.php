@@ -58,45 +58,6 @@
                             </div>
                            @endfor
                     
-                    
-                    
-                    <!--<div class="form-group row">-->
-            　       <!--    <label class="col-md-2">画像1</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image1">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group row">      -->
-                    <!--    <label class="col-md-2">画像2</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image2">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group row">-->
-                    <!--    <label class="col-md-2">画像3</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image3">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group row">-->
-                    <!--    <label class="col-md-2">画像4</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image4">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group row">-->
-                    <!--    <label class="col-md-2">画像5</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image5">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group row">-->
-                    <!--    <label class="col-md-2">画像6</label>-->
-                    <!--<div class="col-md-10">-->
-                    <!--    <input type="file" class="form-control-file" name="image6">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    
         {{ csrf_field() }}
         　　　　　　　　　　　　　　<div class="form-group row">
                             <input type="submit" class="btn btn-primary" value="更新">

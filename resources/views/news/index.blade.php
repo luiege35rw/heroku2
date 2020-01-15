@@ -17,7 +17,7 @@
                                  @endif
                                 </div>
                                  <div class="model p-2">
-                                    <h1>{{ str_limit($headline->model, 70) }}</h1>
+                                     <h1>{{ str_limit($headline->model, 70) }}</h1>
                                 </div>
                                 <div class="text-right mt-3">
                                     <p3>{{ str_limit($headline->title, 70) }}</p3>
@@ -49,7 +49,7 @@
                  @if ($headline->image_path)
                  <a href="{{ asset('storage/image/' . $headline->profile->image_path) }}" data-lightbox="car">
                      <img src="{{ asset('storage/image/' . $headline->profile->image_path) }}" style="max-width:300px;max-hight:200px">
-                     </a>
+                 </a>
                  @endif
              </div>
             </div>
@@ -60,8 +60,8 @@
                 @if ($headline->profile->{'image_path' . $i})
                 <a href="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" data-lightbox="car">
                     <img src="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
-                    </a>
-                    @endif
+                </a>
+                @endif
                 @endfor
             </div>
         @endif
@@ -126,7 +126,7 @@
                 @if ($post->profile->{'image_path' . $i})
                 <a href="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" data-lightbox="car">
                     <img src="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
-                    </a>
+                </a>
                 @endif
                 @endfor
             </div>

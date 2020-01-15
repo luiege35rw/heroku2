@@ -17,15 +17,15 @@
                     @endif
                        <!--プロフィールのデータをプルダウンメニューに所得-->
                       <div class="form-group row">
-                        <label class="col-md-2" for="profile_id">プロフィール</label>
-                        <div class="col-md-10">
-                            {{Form::select('profile_id', $profiles, old('profile_id'),['class' => 'form-control'])}}
+                          <label class="col-md-2" for="profile_id">プロフィール</label>
+                          <div class="col-md-10">
+                              {{Form::select('profile_id', $profiles, old('profile_id'),['class' => 'form-control'])}}
                          </div>   
-                        </div>
+                     </div>
                      <div class="form-group row">
-                        <label class="col-md-2">車種</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="model" value="{{ old('model') }}">
+                         <label class="col-md-2">車種</label>
+                         <div class="col-md-10">
+                             <input type="text" class="form-control" name="model" value="{{ old('model') }}">
                         </div>
                     </div>
                     <div class="form-group row">

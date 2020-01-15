@@ -22,7 +22,6 @@ class ProfileController extends Controller
       $form = $request->all();
 
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
-      // パターン2　フォームから画像が送信されてきたら、保存して、$profile_id->image_path に画像のパスを保存する
       
      
       if (isset($form['image'])) {

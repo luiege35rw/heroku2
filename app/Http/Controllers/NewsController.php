@@ -27,31 +27,4 @@ class NewsController extends Controller
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);
     }
     
-    //   public function profile()
-    // {
-    //   return $this->hasOne(Profile::class,'foreign_key','id');
-
-    // }
 }
-    
-    
-    
-    
-//     // ハイライト検索
-    
-//   public function sublinhamos($text, $words) {
-//     $wordsArray = array();
-//     $markedWords = array();
-//     // explode the phrase in words
-//     $wordsArray = explode(' ', $words); 
-
-//     foreach ($wordsArray as $k => $word) {
-//       $markedWords[$post]='<mark>'.$word.'</mark>';
-//     }
-
-//     $text = str_ireplace($wordsArray, $markedWords, $text);
-
-//     //right trows results
-//     return $text;
-// }
-// }
