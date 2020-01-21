@@ -11,9 +11,9 @@
                             <div class="caption mx-auto">
                                 <div class="image">
                                    @if ($headline->image_path)
-                                   <a href="{{ asset('storage/image/' . $headline->image_path) }}" data-lightbox="car">
-                                     <img src="{{ asset('storage/image/' . $headline->image_path) }}">
-                                     </a>
+                                       <a href="{{ $headline->image_path }}" data-lightbox="car">
+                                           <img src="{{ $headline->image_path }}">
+                                       </a>
                                  @endif
                                 </div>
                                  <div class="model p-2">
@@ -47,8 +47,8 @@
              
                                   
                  @if ($headline->image_path)
-                 <a href="{{ asset('storage/image/' . $headline->profile->image_path) }}" data-lightbox="car">
-                     <img src="{{ asset('storage/image/' . $headline->profile->image_path) }}" style="max-width:300px;max-hight:200px">
+                 <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
+                     <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
                  </a>
                  @endif
              </div>
@@ -58,8 +58,8 @@
                 <!--写真投稿ループヘッドライン-->
             @for ($i =1; $i <= 6; $i++)
                 @if ($headline->profile->{'image_path' . $i})
-                <a href="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" data-lightbox="car">
-                    <img src="{{ asset('storage/image/' . $headline->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                <a href="{{ $headline->profile->{'image_path' . $i} }}" data-lightbox="car">
+                    <img src="{{ $headline->profile->{'image_path' . $i} }}" style="max-width:300px;max-hight:200px">
                 </a>
                 @endif
                 @endfor
@@ -89,8 +89,8 @@
                         <div class="row2">
                             <div class="image col-md-6 text-left mt-4">
                                 @if ($post->image_path)
-                                    <a href="{{ asset('storage/image/' . $post->image_path) }}" data-lightbox="car">
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}"style="max-width:300px;max-hight:200px">
+                                    <a href="{{ $post->image_path }}" data-lightbox="car">
+                                    <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px">
                                     </a>
                                 @endif
                             </div>
@@ -114,8 +114,8 @@
                  
                                         
                  @if ($post->image_path)
-                 　　<a href="{{ asset('storage/image/' . $post->profile->image_path) }}" data-lightbox="car">
-                     <img src="{{ asset('storage/image/' . $post->profile->image_path) }}" style="max-width:300px;max-hight:200px">
+                 　　<a href="{{ $post->profile->image_path }}" data-lightbox="car">
+                     <img src="{{ $post->profile->image_path }}" style="max-width:300px;max-hight:200px">
                      </a>
                  @endif
              </div>
@@ -124,8 +124,8 @@
                 <!--写真投稿ループ本文-->
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})
-                <a href="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" data-lightbox="car">
-                    <img src="{{ asset('storage/image/' . $post->profile->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                <a href="{{ $post->profile->{'image_path' . $i} }}" data-lightbox="car">
+                    <img src="{{ $post->profile->{'image_path' . $i} }}" style="max-width:300px;max-hight:200px">
                 </a>
                 @endif
                 @endfor

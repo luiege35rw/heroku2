@@ -40,12 +40,12 @@
            <p>～あの時こんな車に乗ってました～</p>
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
         　 <div class="header-text-area">
-        　 <div class="menu1"> <a class="navbar-brand " href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/"><i class="fas fa-home fa-lg"></i></a></div>
-           <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
-           <div class="menu1"> <a class="nav-link"href="https://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
-           <div class="menu1"> <a class="nav-link"href="http://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
+        　 <div class="menu1"> <a class="navbar-brand" href="/"><i class="fas fa-home fa-lg"></i></a></div>
+           <div class="menu1"> <a class="nav-link"href="admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
+           <div class="menu1"> <a class="nav-link"href="profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
+           <div class="menu1"> <a class="nav-link"href="admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
            <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
-           <div class="menu2"> <a class="nav-link"href="https://4b7389b1dfd948b7ae1b36b24dd49835.vfs.cloud9.us-east-2.amazonaws.com/_static/index.html/Aishajiman.html/information.html"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
+           <div class="menu2"> <a class="nav-link"href="information"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
         　 
            </div>     
            </div>

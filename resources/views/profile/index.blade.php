@@ -27,14 +27,14 @@
                             </div>
                             <div class="image col-md-6 text-right md-4">
                               @if ($post->image_path)
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}" style="max-width:300px;max-hight:200px">
+                                    <img src="{{ $post->image_path }}" style="max-width:300px;max-hight:200px">
                                  @endif
                              </div>
                         </div>
                         <div>
                             @for ($i =1; $i <= 6; $i++)
                             @if ($post->{'image_path' . $i})
-                                <img src="{{ asset('storage/image/' . $post->{'image_path' . $i}) }}" style="max-width:300px;max-hight:200px">
+                                <img src="{{ $post->{'image_path' . $i} }}" style="max-width:300px;max-hight:200px">
                             @endif
                             @endfor
                         </div>

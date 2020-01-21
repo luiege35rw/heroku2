@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\HTML;
 
 // 追記
 use App\Profile;
+use Storage;
 
 class ProfileController extends Controller
 {

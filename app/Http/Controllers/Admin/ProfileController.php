@@ -23,17 +23,19 @@ class ProfileController extends Controller
 
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
       
-     
       if (isset($form['image'])) {
-      $path = $request->file('image')->store('public/image');
-      $profile->image_path = basename($path);
+         $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+         $profile->image_path = Storage::disk('s3')->url($path);
       } else {
           $profile->image_path = null;
       }
+      
+      //写真添付画面ループ処理
+     
       for ($i = 1;$i <= 6; $i ++) {
           if (isset($form['image' . $i])) {
-              $path = $request->file('image' . $i)->store('public/image');
-              $profile->{'image_path' . $i} = basename($path);
+              $path = Storage::disk('s3')->putFile('/',$request->file('image' . $i),'public');
+              $profile->{'image_path' . $i} = Storage::disk('s3')->url($path);
           } else {
               $profile->{'image_path' . $i} = null;
           }
@@ -92,8 +94,8 @@ public function index(Request $request)
       $profile_form = $request->all();
       
    if (isset($profile_form['image'])) {
-        $path = $request->file('image')->store('public/image');
-        $profile->image_path = basename($path);
+        $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        $profile->image_path = Storage::disk('s3')->url($path);
     
         unset($profile_form['image']);
       } elseif (isset($request->remove)) {
