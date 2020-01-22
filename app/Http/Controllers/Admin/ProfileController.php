@@ -95,7 +95,7 @@ public function index(Request $request)
       $profile_form = $request->all();
       
    if (isset($profile_form['image'])) {
-        $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        $path = Storage::disk('s3')->putFile('/',$profile_form['image'],'public');
         $profile->image_path = Storage::disk('s3')->url($path);
     
         unset($profile_form['image']);
@@ -106,8 +106,8 @@ public function index(Request $request)
       // ループ処理
       for ($i = 1;$i <= 6; $i++) {
           if (isset($profile_form['image' . $i])) {
-              $path = $request->file('image' . $i)->store('public/image');
-              $profile->{'image_path' . $i} = basename($path);
+              $path = Storage::disk('s3')->putFile('/',$request->file('image' . $i),'public');
+              $profile->{'image_path' . $i} = Storage::disk('s3')->url($path);
               unset($profile_form['image' . $i]);
           } elseif (isset($request->{'remove' . $i})) {
               $profile->{'image_path' . $i} = null;

@@ -12,7 +12,7 @@
                                 <div class="image">
                                    @if ($headline->image_path)
                                        <a href="{{ $headline->image_path }}" data-lightbox="car">
-                                           <img src="{{ $headline->image_path }}">
+                                           <img src="{{ $headline->image_path }}"　style="max-width:300px;max-hight:200px">
                                        </a>
                                  @endif
                                 </div>
