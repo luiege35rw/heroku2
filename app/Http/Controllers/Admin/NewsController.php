@@ -18,7 +18,7 @@ class NewsController extends Controller
   
    public function create(Request $request)
   {
-     \Debugbar::info($request);
+     
       $this->validate($request, News::$rules);
 
       $news = new News;
