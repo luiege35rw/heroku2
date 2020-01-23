@@ -1,0 +1,17 @@
+body {
+   background-color: #FFCCFF;
+}
+
+.btn
+{
+  border: 2px solid;
+  margin: 10px;
+  border-color: #aaaaaa #444444 #444444 #aaaaaa;
+  background-color: #FF00FF;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.menu5 {
+    text-align: center;
+}
