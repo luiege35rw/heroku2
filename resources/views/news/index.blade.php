@@ -36,7 +36,7 @@
                     {{ str_limit($headline->profile->name, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->profile->model, 150) }}
+                    {{ str_limit($headline->profile->modelhistory, 150) }}
              </div>
               <div class="name mt-3">
                     {{ str_limit($headline->profile->spot, 150) }}

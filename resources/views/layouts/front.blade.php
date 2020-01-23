@@ -45,7 +45,7 @@
            <div class="menu1"> <a class="nav-link"href="profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
            <div class="menu1"> <a class="nav-link"href="admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
            <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
-           <div class="menu2"> <a class="information"></a><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
+           <div class="menu2"> <a class="nav-link"href="info"></a><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
         　 
            </div>     
            </div>
@@ -56,24 +56,24 @@
      </div>
      
      <!--ライトボックス写真一覧-->
- <a href="storage/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="storage/image/images1_thumb.jpg" alt="アリスト"></a>
-<a href="storage/image/bigimages2.jpg" data-lightbox="CAR" data-title="クラウン210系"><img src="storage/image/images2_thumb.jpg" alt="クラウン210系"></a>
-<a href="storage/image/bigimages3.jpg" data-lightbox="CAR" data-title="スカイラインR34"><img src="storage/image/images3_thumb.jpg" alt="スカイラインR34"></a>
-<a href="storage/image/bigimages4.jpg" data-lightbox="CAR" data-title="チェイサー"><img src="storage/image/images4_thumb.jpg" alt="チェイサー"></a>
-<a href="storage/image/bigimages5.jpg" data-lightbox="CAR" data-title="ノート"><img src="storage/image/images5_thumb.jpg" alt="ノート"></a>
-<a href="storage/image/bigimages6.jpg" data-lightbox="CAR" data-title="ポルシェ911"><img src="storage/image/images6_thumb.jpg" alt="ポルシェ911"></a>
-<a href="storage/image/bigimages7.jpg" data-lightbox="CAR" data-title="マツダロードスター"><img src="storage/image/images7_thumb.jpg" alt="マツダロードスター"></a>
-<a href="storage/image/bigimages8.jpg" data-lightbox="CAR" data-title="ランドクルーザー"><img src="storage/image/images8_thumb.jpg" alt="ランドクルーザー"></a>
-<a href="storage/image/bigimages9.jpg" data-lightbox="CAR" data-title="ワゴンR"><img src="storage/image/images9_thumb.jpg" alt="ワゴンR"></a>
-<a href="storage/image/bigimages10.jpg" data-lightbox="CAR" data-title="EKワゴン"><img src="storage/image/images10_thumb.jpg" alt="EKワゴン"></a>
-<a href="storage/image/bigimages11.jpg" data-lightbox="CAR" data-title="プリウス"><img src="storage/image/images11_thumb.jpg" alt="プリウス"></a>
-<a href="storage/image/bigimages12.jpg" data-lightbox="CAR" data-title="ピンククラウン"><img src="storage/image/images12_thumb.jpg" alt="ピンククラウン"></a>
-<a href="storage/image/bigimages13.jpg" data-lightbox="CAR" data-title="マセラティギブリ"><img src="storage/image/images13_thumb.jpg" alt="マセラティギブリ"></a>
-<a href="storage/image/bigimages14.jpg" data-lightbox="CAR" data-title="ベンツAMG-GT"><img src="storage/image/images14_thumb.jpg" alt="ベンツAMG-GT"></a>
-<a href="storage/image/bigimages15.jpg" data-lightbox="CAR" data-title="フェラーリスパイダー"><img src="storage/image/images15_thumb.jpg" alt="フェラーリスパイダー"></a>
-<a href="storage/image/bigimages16.jpg" data-lightbox="CAR" data-title="大黒ふ頭"><img src="storage/image/images16_thumb.jpg" alt="大黒ふ頭"></a>
-<a href="storage/image/bigimages17.jpg" data-lightbox="CAR" data-title="ピンククラウン納車"><img src="storage/image/images17_thumb.jpg" alt="ピンククラウン納車"></a>
-<a href="storage/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="storage/image/images18.jpg" alt="マセラティギブリ白"></a>
+ <a href="/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="/image/images1_thumb.jpg" alt="アリスト"></a>
+<a href="/image/bigimages2.jpg" data-lightbox="CAR" data-title="クラウン210系"><img src="/image/images2_thumb.jpg" alt="クラウン210系"></a>
+<a href="/image/bigimages3.jpg" data-lightbox="CAR" data-title="スカイラインR34"><img src="/image/images3_thumb.jpg" alt="スカイラインR34"></a>
+<a href="/image/bigimages4.jpg" data-lightbox="CAR" data-title="チェイサー"><img src="/image/images4_thumb.jpg" alt="チェイサー"></a>
+<a href="/image/bigimages5.jpg" data-lightbox="CAR" data-title="ノート"><img src="/image/images5_thumb.jpg" alt="ノート"></a>
+<a href="/image/bigimages6.jpg" data-lightbox="CAR" data-title="ポルシェ911"><img src="/image/images6_thumb.jpg" alt="ポルシェ911"></a>
+<a href="/image/bigimages7.jpg" data-lightbox="CAR" data-title="マツダロードスター"><img src="/image/images7_thumb.jpg" alt="マツダロードスター"></a>
+<a href="/image/bigimages8.jpg" data-lightbox="CAR" data-title="ランドクルーザー"><img src="/image/images8_thumb.jpg" alt="ランドクルーザー"></a>
+<a href="/image/bigimages9.jpg" data-lightbox="CAR" data-title="ワゴンR"><img src="/image/images9_thumb.jpg" alt="ワゴンR"></a>
+<a href="/image/bigimages10.jpg" data-lightbox="CAR" data-title="EKワゴン"><img src="/image/images10_thumb.jpg" alt="EKワゴン"></a>
+<a href="/image/bigimages11.jpg" data-lightbox="CAR" data-title="プリウス"><img src="/image/images11_thumb.jpg" alt="プリウス"></a>
+<a href="/image/bigimages12.jpg" data-lightbox="CAR" data-title="ピンククラウン"><img src="/image/images12_thumb.jpg" alt="ピンククラウン"></a>
+<a href="/image/bigimages13.jpg" data-lightbox="CAR" data-title="マセラティギブリ"><img src="/image/images13_thumb.jpg" alt="マセラティギブリ"></a>
+<a href="/image/bigimages14.jpg" data-lightbox="CAR" data-title="ベンツAMG-GT"><img src="/image/images14_thumb.jpg" alt="ベンツAMG-GT"></a>
+<a href="/image/bigimages15.jpg" data-lightbox="CAR" data-title="フェラーリスパイダー"><img src="/image/images15_thumb.jpg" alt="フェラーリスパイダー"></a>
+<a href="/image/bigimages16.jpg" data-lightbox="CAR" data-title="大黒ふ頭"><img src="/image/images16_thumb.jpg" alt="大黒ふ頭"></a>
+<a href="/image/bigimages17.jpg" data-lightbox="CAR" data-title="ピンククラウン納車"><img src="/image/images17_thumb.jpg" alt="ピンククラウン納車"></a>
+<a href="/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="/image/images18.jpg" alt="マセラティギブリ白"></a>
            {{-- ここまでナビゲーションバー --}}
            
            
