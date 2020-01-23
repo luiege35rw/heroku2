@@ -56,7 +56,7 @@
      </div>
      
      <!--ライトボックス写真一覧-->
- <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages1.jpg" alt="アリスト"></a>
+ <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images1_thumb.jpg" alt="アリスト"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages2.jpg" data-lightbox="CAR" data-title="クラウン210系"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images2_thumb.jpg" alt="クラウン210系"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages3.jpg" data-lightbox="CAR" data-title="スカイラインR34"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images3_thumb.jpg" alt="スカイラインR34"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages4.jpg" data-lightbox="CAR" data-title="チェイサー"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images4_thumb.jpg" alt="チェイサー"></a>
@@ -73,7 +73,7 @@
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages15.jpg" data-lightbox="CAR" data-title="フェラーリスパイダー"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images15_thumb.jpg" alt="フェラーリスパイダー"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages16.jpg" data-lightbox="CAR" data-title="大黒ふ頭"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images16_thumb.jpg" alt="大黒ふ頭"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages17.jpg" data-lightbox="CAR" data-title="ピンククラウン納車"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images17_thumb.jpg" alt="ピンククラウン納車"></a>
-<a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images18.jpg" alt="マセラティギブリ白"></a>
+<a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images18_thumb.jpg" alt="マセラティギブリ白"></a>
            {{-- ここまでナビゲーションバー --}}
            
            
