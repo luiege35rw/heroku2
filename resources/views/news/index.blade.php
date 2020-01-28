@@ -36,7 +36,7 @@
                     {{ str_limit($headline->profile->name, 150) }}
              </div>
               <div class="name mt-3">
-                    {{ str_limit($headline->profile->modelhistory, 150) }}
+                    {{ str_limit($headline->profile->model, 150) }}
              </div>
               <div class="name mt-3">
                     {{ str_limit($headline->profile->spot, 150) }}
@@ -75,6 +75,15 @@
                                 <div class="date">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
+                                <div class="row2">
+                            <div class="image col-md-6 text-left mt-4">
+                                @if ($post->image_path)
+                                    <a href="{{ $post->image_path }}" data-lightbox="car">
+                                    <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px">
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
                                 <div class="model mt-3">
                                     {{ str_limit($post->model, 150) }}
                                 </div>
@@ -86,16 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row2">
-                            <div class="image col-md-6 text-left mt-4">
-                                @if ($post->image_path)
-                                    <a href="{{ $post->image_path }}" data-lightbox="car">
-                                    <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px">
-                                    </a>
-                                @endif
-                            </div>
                         </div>
-                    </div>
     
                     <!--プロフィール情報を表示する-->
              <div class="name mt-3">
