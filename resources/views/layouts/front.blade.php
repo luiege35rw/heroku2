@@ -75,13 +75,40 @@
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages17.jpg" data-lightbox="CAR" data-title="ピンククラウン納車"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images17_thumb.jpg" alt="ピンククラウン納車"></a>
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images18_thumb.jpg" alt="マセラティギブリ白"></a>
            {{-- ここまでナビゲーションバー --}}
-           
-           
+         
+         
+         
 
             <main class="py-4">
                 
                 @yield('content')
             </main>
+              <ul style="margin-bottom: 20px;">
+                  
+              </style>
+                  @guest
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                            @endguest  
+              </ul>
         </div>
     </body>
 </html>

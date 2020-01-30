@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .header .logo {
   width: 120px;
   height: 82px;
@@ -49,6 +51,30 @@
 
 .text-right.mt-3 {
   float: right;
+}
+
+img.dropshadow {
+  box-shadow: 10px 10px 10px 10px #333;
+}
+
+.image-top {
+  position: relative;
+}
+
+.image-top p .bg {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.image-top p {
+  position: absolute;
+  /*絶対配置*/
+  color: white;
+  /*文字は白に*/
+  bottom: 0px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 body {

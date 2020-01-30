@@ -76,17 +76,16 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="row2">
-                            <div class="image col-md-6 text-left mt-4">
+                            <div class="image image-top col-md-6 text-left mt-4">
                                 @if ($post->image_path)
                                     <a href="{{ $post->image_path }}" data-lightbox="car">
-                                    <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px">
+                                    <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px" class="dropshadow"> 
                                     </a>
+                                    <p class="bg"><p>{{ str_limit($post->model, 150) }}</p></p>
+                                    
                                 @endif
                             </div>
                         </div>
-                                <div class="model mt-3">
-                                    {{ str_limit($post->model, 150) }}
-                                </div>
                                 <div class="title mt-3">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
