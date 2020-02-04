@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 .header .logo {
   width: 120px;
   height: 82px;
@@ -68,9 +66,24 @@ img.dropshadow {
 
 .image-top p {
   position: absolute;
-  /*絶対配置*/
   color: white;
-  /*文字は白に*/
+  bottom: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.image2-top {
+  position: relative;
+}
+
+.image2-top p .cg {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.image2-top p {
+  color: yellow;
   bottom: 0px;
   margin-bottom: 0px;
   text-align: center;
@@ -118,8 +131,7 @@ header {
 
 h1,
 h2,
-p,
-li {
+p {
   text-align: center;
 }
 

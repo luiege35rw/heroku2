@@ -15,10 +15,10 @@
                                 <div class="name mt-3">
                                     {{ str_limit($post->name, 1500) }}
                                 </div>
-                                <div class="body mt-3">
+                                <div class="modelhistory mt-3">
                                     {{ str_limit($post->modelhistory, 1500) }}
                                 </div>
-                                <div class="body mt-3">
+                                <div class="spot mt-3">
                                     {{ str_limit($post->spot, 1500) }}
                                 </div>
                                  <div class="introduction mt-3">
@@ -27,7 +27,7 @@
                             </div>
                             <div class="image col-md-6 text-right md-4">
                               @if ($post->image_path)
-                                    <img src="{{ $post->image_path }}" style="max-width:300px;max-hight:200px">
+                                    <img src="{{ $post->image_path) }}" style="max-width:300px;max-hight:200px">
                                  @endif
                              </div>
                         </div>

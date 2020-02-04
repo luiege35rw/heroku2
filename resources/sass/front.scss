@@ -52,6 +52,7 @@
 img.dropshadow {
   box-shadow: 10px 10px 10px 10px #333;
 }
+// ニュースヘッダー写真
 
 .image-top {
   position: relative;
@@ -62,8 +63,25 @@ img.dropshadow {
   opacity: 0.5;
 }
 .image-top p {
-  position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
+  position: absolute;
+  color: white;
+  bottom: 0px;
+  margin-bottom: 0px;
+  text-align : center;
+  
+  // アバターヘッダー写真
+}
+.image2-top {
+  position: relative;
+}
+.image2-top p .cg {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.image2-top p {
+  color: yellow;
   bottom: 0px;
   margin-bottom: 0px;
   text-align : center;
@@ -112,7 +130,7 @@ header {
   background-color: #808080;
 }
 
-h1,h2,p,li {
+h1,h2,p, {
   text-align: center;
 }
 

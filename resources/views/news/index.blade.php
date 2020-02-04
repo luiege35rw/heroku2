@@ -36,13 +36,13 @@
             <div class="name mt-3">
                     {{ str_limit($headline->profile->name, 150) }}
              </div>
-              <div class="name mt-3">
+              <div class="model mt-3">
                     {{ str_limit($headline->profile->model, 150) }}
              </div>
-              <div class="name mt-3">
+              <div class="spot mt-3">
                     {{ str_limit($headline->profile->spot, 150) }}
              </div>
-              <div class="name mt-3">
+              <div class="introduction mt-3">
                     {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
@@ -96,23 +96,8 @@
                             </div>
                         </div>
                         </div>
-    
-                    <!--プロフィール情報を表示する-->
-             <div class="name mt-3">
-                    {{ str_limit($post->profile->name, 150) }}
-             </div>
-             <div class="name mt-3">
-                    {{ str_limit($post->profile->modelhistory, 150) }}
-             </div>
-             <div class="name mt-3">
-                    {{ str_limit($post->profile->spot, 150) }}
-             </div>
-             <div class="name mt-3">
-                    {{ str_limit($post->profile->introduction, 1500) }}
-             </div>
+             
              <div class="image col-md-6 text-right md-4">
-                 
-                                        
                  @if ($post->image_path)
                  　　<a href="{{ $post->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $post->profile->image_path }}" style="max-width:300px;max-hight:200px">
@@ -130,7 +115,20 @@
                 @endif
                 @endfor
             </div>
-                
+            
+                            <!--プロフィール情報を表示する-->
+             <div class="name mt-3">
+                    {{ str_limit($post->profile->name, 150) }}
+             </div>
+             <div class="modelhistory mt-3">
+                    {{ str_limit($post->profile->modelhistory, 150) }}
+             </div>
+             <div class="spot mt-3">
+                    {{ str_limit($post->profile->spot, 150) }}
+             </div>
+             <div class="introduction mt-3">
+                    {{ str_limit($post->profile->introduction, 1500) }}
+             </div>
                 <hr color="#c0c0c0">
                 @endforeach
             </div>
