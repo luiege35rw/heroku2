@@ -30,8 +30,9 @@
                     </div>
                 </div>
             </div>
-         
-            <!--プロフィール情報を表示する->
+            
+            
+            
             <div class="name mt-3">
                     {{ str_limit($headline->profile->name, 150) }}
              </div>
