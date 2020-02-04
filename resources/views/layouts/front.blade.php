@@ -83,7 +83,7 @@
                 
                 @yield('content')
             </main>
-              <ul style="margin-bottom: 20px;">
+              <ul style="margin-bottom: 20px;"></ul>
                   
               </style>
                   @guest

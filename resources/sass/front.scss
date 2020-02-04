@@ -14,7 +14,6 @@
 
 .headline .caption .model {
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -46,8 +45,8 @@
 .posts .post .image img {
   width: 250px;
 }
-.text-right.mt-3 {
-  float: right;
+.text-center.mt-3 {
+  float: clear;
 }
 
 img.dropshadow {
@@ -113,16 +112,7 @@ header {
   background-color: #808080;
 }
 
-h1,h2,p,p2 {
+h1,h2,p,li {
   text-align: center;
 }
-
-.faq input
-			{
-				width: 100%;
-				font-size: 20px;
-				display: block;
-				padding: 0 20px;
-				margin-bottom: 40px;
-			}
 

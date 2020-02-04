@@ -4,9 +4,9 @@
     <div class="container">
         <hr color="#c0c0c0">
         @if (!is_null($headline))
-            <div class="row">
+            <div class="row2">
                 <div class="headline col-md-10 mx-auto">
-                    <div class="row">
+                    <div class="row2">
                         <div class="col-md-6">
                             <div class="caption mx-auto">
                                 <div class="image">
@@ -19,7 +19,7 @@
                                  <div class="model p-2">
                                      <h1>{{ str_limit($headline->model, 70) }}</h1>
                                 </div>
-                                <div class="text-right mt-3">
+                                <div class="text-center mt-3">
                                     <p3>{{ str_limit($headline->title, 70) }}</p3>
                                 </div>
                             </div>
