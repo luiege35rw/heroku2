@@ -4,6 +4,7 @@
     <div class="container">
         <hr color="#c0c0c0">
         @if (!is_null($headline))
+        <!--ヘッドラインNEWSアバター写真              -->
             <div class="row2">
                 <div class="headline col-md-10 mx-auto">
                     <div class="row2">
@@ -30,32 +31,16 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-            <div class="name mt-3">
-                    {{ str_limit($headline->profile->name, 150) }}
-             </div>
-              <div class="model mt-3">
-                    {{ str_limit($headline->profile->model, 150) }}
-             </div>
-              <div class="spot mt-3">
-                    {{ str_limit($headline->profile->spot, 150) }}
-             </div>
-              <div class="introduction mt-3">
-                    {{ str_limit($headline->profile->introduction, 1500) }}
-             </div>
-             
-                                  
+                    <!--ヘッドラインプロフィールアバター写真              -->
                  @if ($headline->image_path)
                  <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
                  </a>
+                 <p>{{ str_limit($headline->profile->name, 150) }}</p>
                  @endif
              </div>
             </div>
             <div>
-                 
                 <!--写真投稿ループヘッドライン-->
             @for ($i =1; $i <= 6; $i++)
                 @if ($headline->profile->{'image_path' . $i})
@@ -66,6 +51,18 @@
                 @endfor
             </div>
         @endif
+        
+             <!--ヘッドラインプロフィール項目-->
+              <div class="model mt-3">
+                    {{ str_limit($headline->profile->model, 150) }}
+             </div>
+              <div class="spot mt-3">
+                    {{ str_limit($headline->profile->spot, 150) }}
+             </div>
+              <div class="introduction mt-3">
+                    {{ str_limit($headline->profile->introduction, 1500) }}
+             </div>
+             
         <hr color="#c0c0c0">
         <div class="row2">
             <div class="posts col-md-8 mx-auto mt-3">
@@ -96,17 +93,18 @@
                             </div>
                         </div>
                         </div>
-             
-             <div class="image col-md-6 text-right md-4">
+            　 <!--プロフィールアバター写真投稿-->
+             <div class="image image2-top col-md-6 text-center md-4">
                  @if ($post->image_path)
                  　　<a href="{{ $post->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $post->profile->image_path }}" style="max-width:300px;max-hight:200px">
                      </a>
+                      <p class="cg"><p><p>{{ str_limit($post->profile->name, 150) }}</p></p>
                  @endif
              </div>
             </div>
             <div>
-                <!--写真投稿ループ本文-->
+                <!--プロフィール写真投稿ループ-->
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})
                 <a href="{{ $post->profile->{'image_path' . $i} }}" data-lightbox="car">
@@ -117,9 +115,6 @@
             </div>
             
                             <!--プロフィール情報を表示する-->
-             <div class="name mt-3">
-                    {{ str_limit($post->profile->name, 150) }}
-             </div>
              <div class="modelhistory mt-3">
                     {{ str_limit($post->profile->modelhistory, 150) }}
              </div>
