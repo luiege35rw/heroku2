@@ -77,7 +77,6 @@ img.dropshadow {
 }
 
 .image2-top p .cg {
-  position: absolute;
   background-color: black;
   opacity: 0.5;
 }
@@ -131,8 +130,7 @@ header {
 
 h1,
 h2,
-p,
-li {
+p {
   text-align: center;
 }
 

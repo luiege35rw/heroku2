@@ -21,7 +21,7 @@
                                      <h1>{{ str_limit($headline->model, 70) }}</h1>
                                 </div>
                                 <div class="text-center mt-3">
-                                    <p3>{{ str_limit($headline->title, 70) }}</p3>
+                                    <p>{{ str_limit($headline->title, 70) }}</p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
         
              <!--ヘッドラインプロフィール項目-->
               <div class="model mt-3">
-                    {{ str_limit($headline->profile->model, 150) }}
+                    {{ str_limit($headline->profile->modelhistory, 150) }}
              </div>
               <div class="spot mt-3">
                     {{ str_limit($headline->profile->spot, 150) }}
@@ -75,13 +75,13 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="row2">
+                                    <!--NEWS写真１枚-->
                             <div class="image image-top col-md-6 text-left mt-4">
                                 @if ($post->image_path)
                                     <a href="{{ $post->image_path }}" data-lightbox="car">
                                     <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px" class="dropshadow"> 
                                     </a>
                                     <p class="bg"><p>{{ str_limit($post->model, 150) }}</p></p>
-                                    
                                 @endif
                             </div>
                         </div>
