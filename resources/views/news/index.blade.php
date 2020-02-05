@@ -31,12 +31,13 @@
                     </div>
                 </div>
             </div>
-                    <!--ヘッドラインプロフィールアバター写真              -->
+                    <!--ヘッドラインプロフィールアバター写真-->
+                  <div class="image image2-top col-md-6 text-center md-4">  
                  @if ($headline->image_path)
                  <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
                  </a>
-                 <p>{{ str_limit($headline->profile->name, 150) }}</p>
+                 <p class="cg"><p><p>{{ str_limit($headline->profile->name, 150) }}</p></p>
                  @endif
              </div>
             </div>
