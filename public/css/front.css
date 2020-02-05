@@ -131,7 +131,8 @@ header {
 
 h1,
 h2,
-p {
+p,
+li {
   text-align: center;
 }
 

@@ -49,10 +49,12 @@
   float: clear;
 }
 
+// ニュースヘッダー写真
+
 img.dropshadow {
   box-shadow: 10px 10px 10px 10px #333;
 }
-// ニュースヘッダー写真
+
 
 .image-top {
   position: relative;
@@ -130,7 +132,7 @@ header {
   background-color: #808080;
 }
 
-h1,h2,p, {
+h1,h2,p,li {
   text-align: center;
 }
 

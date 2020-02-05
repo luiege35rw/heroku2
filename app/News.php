@@ -16,7 +16,7 @@ class News extends Model
     
     public function profile()
     {
-      return $this->belongsTo('App\Profile');
+      return $this->belongsTo('App\Profile')->withDefault();
     }
 }
 //プルダウンメニュー用の配列
