@@ -6,7 +6,7 @@
         @if (!is_null($headline))
         <!--ヘッドラインNEWSアバター写真              -->
             <div class="row2">
-                <div class="headline col-md-10 mx-auto">
+                <div class="headline col-md-8 mx-auto">
                     <div class="row2">
                         <div class="mx-auto mt-4">
                             <div class="caption mx-auto">
