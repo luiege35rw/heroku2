@@ -32,25 +32,27 @@
                 </div>
             </div>
                     <!--ヘッドラインプロフィールアバター写真-->
-                  <div class="image image2-top  text-center">  
-                      @if ($headline->image_path)
-                 <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
-                     <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
-                 </a>
+                <div class="text-center">
+                    <div class="image image2-top  text-center">  
+                         @if ($headline->image_path)
+                    <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
+                         <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
+                    </a>
                  <p class="cg"><p><p>{{ str_limit($headline->profile->name, 150) }}</p></p>
                  @endif
-             </div>
-            </div>
-            <div>
+                   </div>
+                </div>
+            
                 <!--写真投稿ループヘッドライン-->
-            @for ($i =1; $i <= 6; $i++)
-                @if ($headline->profile->{'image_path' . $i})
-                <a href="{{ $headline->profile->{'image_path' . $i} }}" data-lightbox="car">
-                    <img src="{{ $headline->profile->{'image_path' . $i} }}" style="max-width:300px;max-hight:200px">
-                </a>
-                @endif
-                @endfor
-            </div>
+                <div class="text-center">
+                    @for ($i =1; $i <= 6; $i++)
+                    @if ($headline->profile->{'image_path' . $i})
+                        <a href="{{ $headline->profile->{'image_path' . $i} }}" data-lightbox="car">
+                            <img src="{{ $headline->profile->{'image_path' . $i} }}" style="max-width:300px;max-hight:200px">
+                         </a>
+                    @endif
+                    @endfor
+                </div>
         @endif
         
              <!--ヘッドラインプロフィール項目-->
