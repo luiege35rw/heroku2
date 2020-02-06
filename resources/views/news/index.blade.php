@@ -20,7 +20,7 @@
                                  <div class="model p-2">
                                      <h1>{{ str_limit($headline->model, 70) }}</h1>
                                 </div>
-                                <div class="text-center mt-3">
+                                <div class="text-center mt-4">
                                     <p>{{ str_limit($headline->title, 70) }}</p>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
                     <!--ヘッドラインプロフィールアバター写真-->
-                  <div class="image image2-top col-md-6 text-center md-4">  
+                  <div class="image image2-top col-md-6 text-center mt-4">  
                  @if ($headline->image_path)
                  <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
@@ -54,29 +54,29 @@
         @endif
         
              <!--ヘッドラインプロフィール項目-->
-              <div class="text-center mt-3">
+              <div class="text-center mt-4">
                     {{ str_limit($headline->profile->modelhistory, 150) }}
              </div>
-              <div class="text-center mt-3">
+              <div class="text-center mt-4">
                     {{ str_limit($headline->profile->spot, 150) }}
              </div>
-              <div class="text-center mt-3">
+              <div class="text-center mt-4">
                     {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
         <hr color="#c0c0c0">
         <div class="row2">
-            <div class="posts col-md-8 mx-auto mt-3">
+            <div class="posts col-md-8 mx-auto mt-4">
                 @foreach($posts as $post)
-                    <!--<div class="post" style="border:1px solid #000;">-->
+                    <div class="post">
                         <div class="row2">
                             <div class="text col-md-6">
-                                <div class="text-center mt-3">
+                                <div class="text-center mt-4">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
-                                <div class="row2">
+                                <div class="row2 mx-auto">
                                     <!--NEWS写真１枚-->
-                            <div class="image image-top col-md-6 text-left mt-4">
+                            <div class="image image-top col-md-6 text-center mt-4">
                                 @if ($post->image_path)
                                     <a href="{{ $post->image_path }}" data-lightbox="car">
                                     <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px" class="dropshadow"> 
@@ -86,20 +86,20 @@
                             </div>
                         </div>
                         <!--NEWS情報を表示する--->
-                                <div class="text-center mt-3">
+                                <div class="text-center mt-4">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
-                                <div class="text-center mt-3">
+                                <div class="text-center mt-4">
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
                             </div>
                         </div>
                         </div>
             　 <!--プロフィールアバター写真投稿-->
-             <div class="image image2-top col-md-6 text-center md-4">
+             <div class="image image2-top  text-center mt-4">
                  @if ($post->image_path)
                  　　<a href="{{ $post->profile->image_path }}" data-lightbox="car">
-                     <img src="{{ $post->profile->image_path }}" style="max-width:300px;max-hight:200px">
+                         <img src="{{ $post->profile->image_path }}" style="max-width:300px;max-hight:200px">
                      </a>
                       <p class="cg"><p><p>{{ str_limit($post->profile->name, 150) }}</p></p>
                  @endif
@@ -117,13 +117,13 @@
             </div>
             
                             <!--プロフィール情報を表示する-->
-             <div class="text-center mt-3">
+             <div class="text-center mt-4">
                     {{ str_limit($post->profile->modelhistory, 150) }}
              </div>
-             <div class="text-center mt-3">
+             <div class="text-center mt-4">
                     {{ str_limit($post->profile->spot, 150) }}
              </div>
-             <div class="text-center mt-3">
+             <div class="text-center mt-4">
                     {{ str_limit($post->profile->introduction, 1500) }}
              </div>
                 <hr color="#c0c0c0">

@@ -88,6 +88,13 @@ img.dropshadow {
   text-align: center;
 }
 
+div.header,
+div.main {
+  width: 1280px;
+  margin: auto;
+  text-align: left;
+}
+
 body {
   margin: 0px;
   padding-top: 0px;

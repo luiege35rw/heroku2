@@ -34,26 +34,26 @@
   
     <body>
         
-    <header>
-           <div id="app">
+    <div class="header">
+        <div id="app">
            <h1>愛車時MAN</h1>
            <p>～あの時こんな車に乗ってました～</p>
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-        　 <div class="header-text-area">
-        　 <div class="menu1"> <a class="navbar-brand" href="/"><i class="fas fa-home fa-lg"></i></a></div>
-           <div class="menu1"> <a class="nav-link"href="admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
-           <div class="menu1"> <a class="nav-link"href="profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
-           <div class="menu1"> <a class="nav-link"href="admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
-           <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
-           <div class="menu2"> <a class="nav-link" href="/info/index.html"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
+            <div class="header-text-area">
+                <div class="menu1"> <a class="navbar-brand" href="/"><i class="fas fa-home fa-lg"></i></a></div>
+                <div class="menu1"> <a class="nav-link"href="admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
+                <div class="menu1"> <a class="nav-link"href="profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
+                <div class="menu1"> <a class="nav-link"href="admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
+                <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
+                <div class="menu2"> <a class="nav-link" href="/info/index.html"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
         　 
            </div>     
-           </div>
-    </header>
+        </div>
+    </div>
 
     
-<input type="search" value=""style="width:1900px" placeholder="メモ" />
-     </div>
+
+     <div class="main" style="clear:both">
      
      <!--ライトボックス写真一覧-->
  <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages1.jpg" data-lightbox="CAR" data-title="アリスト"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images1_thumb.jpg" alt="アリスト"></a>
@@ -83,9 +83,9 @@
                 
                 @yield('content')
             </main>
-              <ul style="margin-bottom: 20px;"></ul>
+              <ul style="margin-bottom: 20px;">
                   
-              </style>
+              
                   @guest
                         <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
@@ -100,7 +100,7 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                    </a>1111111111
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
