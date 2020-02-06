@@ -8,7 +8,7 @@
             <div class="row2">
                 <div class="headline col-md-10 mx-auto">
                     <div class="row2">
-                        <div class="col-md-6">
+                        <div class="mx-auto mt-4">
                             <div class="caption mx-auto">
                                 <div class="image">
                                    @if ($headline->image_path)
@@ -25,15 +25,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="text-center mt-4">
                             <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                         </div>
                     </div>
                 </div>
             </div>
                     <!--ヘッドラインプロフィールアバター写真-->
-                  <div class="image image2-top col-md-6 text-center mt-4">  
-                 @if ($headline->image_path)
+                  <div class="image image2-top  text-center">  
+                      @if ($headline->image_path)
                  <a href="{{ $headline->profile->image_path }}" data-lightbox="car">
                      <img src="{{ $headline->profile->image_path }}" style="max-width:300px;max-hight:200px">
                  </a>
@@ -70,13 +70,13 @@
                 @foreach($posts as $post)
                     <div class="post">
                         <div class="row2">
-                            <div class="text col-md-6">
+                            <div class=" mx-auto mt-4">
                                 <div class="text-center mt-4">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="row2 mx-auto">
                                     <!--NEWS写真１枚-->
-                            <div class="image image-top col-md-6 text-center mt-4">
+                            <div class="image image-top  text-center mt-4">
                                 @if ($post->image_path)
                                     <a href="{{ $post->image_path }}" data-lightbox="car">
                                     <img src="{{ $post->image_path }}"style="max-width:300px;max-hight:200px" class="dropshadow"> 
