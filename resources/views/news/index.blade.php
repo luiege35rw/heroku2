@@ -54,13 +54,13 @@
         @endif
         
              <!--ヘッドラインプロフィール項目-->
-              <div class="model mt-3">
+              <div class="text-center mt-3">
                     {{ str_limit($headline->profile->modelhistory, 150) }}
              </div>
-              <div class="spot mt-3">
+              <div class="text-center mt-3">
                     {{ str_limit($headline->profile->spot, 150) }}
              </div>
-              <div class="introduction mt-3">
+              <div class="text-center mt-3">
                     {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
@@ -71,7 +71,7 @@
                     <!--<div class="post" style="border:1px solid #000;">-->
                         <div class="row2">
                             <div class="text col-md-6">
-                                <div class="date">
+                                <div class="text-center mt-3">
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="row2">
@@ -85,10 +85,11 @@
                                 @endif
                             </div>
                         </div>
-                                <div class="title mt-3">
+                        <!--NEWS情報を表示する--->
+                                <div class="text-center mt-3">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
-                                <div class="body mt-3">
+                                <div class="text-center mt-3">
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
                             </div>
@@ -116,13 +117,13 @@
             </div>
             
                             <!--プロフィール情報を表示する-->
-             <div class="modelhistory mt-3">
+             <div class="text-center mt-3">
                     {{ str_limit($post->profile->modelhistory, 150) }}
              </div>
-             <div class="spot mt-3">
+             <div class="text-center mt-3">
                     {{ str_limit($post->profile->spot, 150) }}
              </div>
-             <div class="introduction mt-3">
+             <div class="text-center mt-3">
                     {{ str_limit($post->profile->introduction, 1500) }}
              </div>
                 <hr color="#c0c0c0">
