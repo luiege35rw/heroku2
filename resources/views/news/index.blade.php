@@ -109,6 +109,7 @@
             </div>
             <div>
                 <!--プロフィール写真投稿ループ-->
+            <div class=" mx-auto mt-4">
                 @for ($i =1; $i <= 6; $i++)
                 @if ($post->profile->{'image_path' . $i})
                 <a href="{{ $post->profile->{'image_path' . $i} }}" data-lightbox="car">
