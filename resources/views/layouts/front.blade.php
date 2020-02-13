@@ -23,6 +23,9 @@
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         <!--<link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">-->
         <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
+        @if($pagename === 'news')
+        <link href="{{ secure_asset('css/front_news.css') }}" rel="stylesheet">
+        @endif
         <!--FontAwesome5を使う-->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <!--ライトボックスを使う-->
@@ -76,8 +79,6 @@
 <a href="https://techboost55.s3.us-east-2.amazonaws.com/image/bigimages18.jpg" data-lightbox="CAR" data-title="マセラティギブリ白"><img src="https://techboost55.s3.us-east-2.amazonaws.com/image/images18_thumb.jpg" alt="マセラティギブリ白"></a>
            {{-- ここまでナビゲーションバー --}}
          
-         
-         
 
             <main class="py-4">
                 
@@ -86,8 +87,8 @@
               <ul style="margin-bottom: 20px;">
                   
               
-                  @guest
-                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                                     @guest
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                         @else
                             <li class="nav-item dropdown">
@@ -100,14 +101,14 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>1111111111
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
-                            @endguest  
+                            @endguest 
               </ul>
         </div>
     </body>

@@ -25,7 +25,7 @@ class NewsController extends Controller
         \Log::debug(__LINE__.' '.__FILE__.' '.print_r($posts, true));
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
-        return view('news.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('news.index', ['headline' => $headline, 'posts' => $posts,'pagename' => 'news']);
     }
     
 }
