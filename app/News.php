@@ -19,6 +19,20 @@ class News extends Model
       return $this->belongsTo('App\Profile')->withDefault();
     }
 }
+
+public function likes()
+    {
+      return $this->hasMany('App\Like');
+    }
+
+    public function like_by()
+    {
+      return Like::where('user_id', \Auth::user()->id)->first();
+    }
+
+
+
+
 //プルダウンメニュー用の配列
   $profile = [
         ''      => '選択してください' ,
