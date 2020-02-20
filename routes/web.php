@@ -41,6 +41,12 @@ Route::get('info', function () {
 Route::get('info/css/style.css', function () {
      return \File::get(public_path() . '/info/css/style.css');
 });
+     
+Route::post('/news/likes', 'LikesController@newsStore');
+Route::post('/news/likes/{like}', 'LikesController@newsDestroy');
+
+Route::post('/profile/likes', 'LikesController@profileStore');
+Route::post('/profile/likes/{like}', 'LikesController@profileDestroy');
 
 Auth::routes();
 

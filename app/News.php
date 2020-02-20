@@ -18,26 +18,16 @@ class News extends Model
     {
       return $this->belongsTo('App\Profile')->withDefault();
     }
-}
 
-public function likes()
+
+// いいね機能のための追加
+    public function likes()
     {
       return $this->hasMany('App\Like');
     }
 
     public function like_by()
     {
-      return Like::where('user_id', \Auth::user()->id)->first();
+      return Like::where('user_id', \Auth::user()->id)->get();
     }
-
-
-
-
-//プルダウンメニュー用の配列
-  $profile = [
-        ''      => '選択してください' ,
-        'name' => 'name' ,
-        'modelhistory'   => 'modelhistory' ,
-        'spot,' => 'spot,' ,
-        'introduction,' => 'introduction,' ,
-    ];
+}

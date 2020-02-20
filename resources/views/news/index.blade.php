@@ -55,6 +55,26 @@
                 </div>
         @endif
         
+        <!--いいね画面追加-->
+        いいね画面
+        @if (Auth::check())
+    @if ($like)
+      <!-- いいね取り消しフォーム -->
+      {{ Form::model($item, array('action' => array('LikesController@destroy', $item->id, $like->id))) }}
+        <button type="submit">
+          ♡ いいね {{ $item->likes_count }}
+        </button>
+      {!! Form::close() !!}
+    @else
+      <!-- いいねフォーム -->
+      {{ Form::model($item, array('action' => array('LikesController@store', $item->id))) }}
+        <button type="submit">
+          + いいね {{ $item->likes_count }}
+        </button>
+      {!! Form::close() !!}
+    @endif
+@endif
+        
              <!--ヘッドラインプロフィール項目-->
               <div class="text-center mt-4">
                     {{ str_limit($headline->profile->modelhistory, 150) }}
@@ -69,7 +89,7 @@
         <hr color="#c0c0c0">
         <div class="row2">
             <div class="posts col-md-8 mx-auto mt-4">
-                @foreach($posts as $post)
+                @foreach($news as $post)
                     <div class="post">
                         <div class="row2">
                             <div class=" mx-auto mt-4">

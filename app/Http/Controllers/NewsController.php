@@ -15,17 +15,26 @@ class NewsController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = News::all()->sortByDesc('updated_at');
+        $news = News::all()->sortByDesc('updated_at');
 
-        if (count($posts) > 0) {
-            $headline = $posts->shift();
+        if (count($news) > 0) {
+            $headline = $news->shift();
         } else {
             $headline = null;
         }
-        \Log::debug(__LINE__.' '.__FILE__.' '.print_r($posts, true));
-        // news/index.blade.php ファイルを渡している
-        // また View テンプレートに headline、 posts、という変数を渡している
-        return view('news.index', ['headline' => $headline, 'posts' => $posts,'pagename' => 'news']);
+        
+        
+         // いいね機能のための追加
+        $like = $news->likes()->where('user_id', Auth::user()->id)->first();
+        dd($like);
+        // news/index.blade.php ファイルを渡している　
+        //また View テンプレートに headline、 posts、という変数を渡している
+        return view('news.index', [
+            'headline' => $headline,
+            'news' => $news,
+            'pagename' => 'news',
+            'like' => $like
+        ]);
     }
-    
+ 
 }
