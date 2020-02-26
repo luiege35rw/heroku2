@@ -42,6 +42,8 @@ Route::get('info/css/style.css', function () {
      return \File::get(public_path() . '/info/css/style.css');
 });
      
+     //いいね機能
+     
 Route::post('/news/likes', 'LikesController@newsStore');
 Route::post('/news/likes/{like}', 'LikesController@newsDestroy');
 

@@ -60,16 +60,16 @@
         @if (Auth::check())
     @if ($like)
       <!-- いいね取り消しフォーム -->
-      {{ Form::model($item, array('action' => array('LikesController@destroy', $item->id, $like->id))) }}
+      {{ Form::model($headline, array('action' => array('LikesController@newsDestroy', $headline->id))) }}
         <button type="submit">
-          ♡ いいね {{ $item->likes_count }}
+          ♡ いいね {{ $headline->likes_count }}
         </button>
       {!! Form::close() !!}
     @else
       <!-- いいねフォーム -->
-      {{ Form::model($item, array('action' => array('LikesController@store', $item->id))) }}
+      {{ Form::model($headline, array('action' => array('LikesController@newsStore', $headline->id))) }}
         <button type="submit">
-          + いいね {{ $item->likes_count }}
+          + いいね {{ $headline->likes_count }}
         </button>
       {!! Form::close() !!}
     @endif

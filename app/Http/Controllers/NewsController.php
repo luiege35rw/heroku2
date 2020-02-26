@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
+use Illuminate\Support\Facades\Auth;
 
 // 追記
 use App\News;
@@ -25,10 +26,11 @@ class NewsController extends Controller
         
         
          // いいね機能のための追加
-        $like = $news->likes()->where('user_id', Auth::user()->id)->first();
-        dd($like);
+         
+        $like = $headline->likes->where('user_id', Auth::id());
         // news/index.blade.php ファイルを渡している　
         //また View テンプレートに headline、 posts、という変数を渡している
+        
         return view('news.index', [
             'headline' => $headline,
             'news' => $news,
