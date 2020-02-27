@@ -54,27 +54,6 @@
                     @endfor
                 </div>
         @endif
-        
-        <!--いいね画面追加-->
-        いいね画面
-        @if (Auth::check())
-    @if ($like)
-      <!-- いいね取り消しフォーム -->
-      {{ Form::model($headline, array('action' => array('LikesController@newsDestroy', $headline->id))) }}
-        <button type="submit">
-          ♡ いいね {{ $headline->likes_count }}
-        </button>
-      {!! Form::close() !!}
-    @else
-      <!-- いいねフォーム -->
-      {{ Form::model($headline, array('action' => array('LikesController@newsStore', $headline->id))) }}
-        <button type="submit">
-          + いいね {{ $headline->likes_count }}
-        </button>
-      {!! Form::close() !!}
-    @endif
-@endif
-        
              <!--ヘッドラインプロフィール項目-->
               <div class="text-center mt-4">
                     {{ str_limit($headline->profile->modelhistory, 150) }}
@@ -86,7 +65,31 @@
                     {{ str_limit($headline->profile->introduction, 1500) }}
              </div>
              
+                     <!--いいね画面追加-->
+    
+        @if (Auth::check())
+        @if ($like)
+            <!-- いいね取り消しフォーム -->
+            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $headline->news_id]) }}
+                <button type="submit">
+                    ♡ いいね {{ $headline->likes_count }}
+                </button>
+        {!! Form::close() !!}
+        @else
+             <!-- いいねフォーム -->
+            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $headline->news_id]) }}
+                <button type="submit">
+                    + いいね {{ $headline->likes_count }}
+                </button>
+       {!! Form::close() !!}
+       @endif
+       @endif
+             
+             
         <hr color="#c0c0c0">
+        
+        <!--ヘッドライン以下-->
+        
         <div class="row2">
             <div class="posts col-md-8 mx-auto mt-4">
                 @foreach($news as $post)
@@ -149,11 +152,31 @@
              <div class="text-center mt-4">
                     {{ str_limit($post->profile->introduction, 1500) }}
              </div>
+             
+                     <!--いいね画面追加-->
+    
+        @if (Auth::check())
+        @if ($like)
+            <!-- いいね取り消しフォーム -->
+            {{ Form::model($post, array('action' => array('LikesController@newsDestroy', $post->id))) }}
+                <button type="submit">
+                    ♡ いいね {{ $post->likes_count }}
+                </button>
+        {!! Form::close() !!}
+        @else
+             <!-- いいねフォーム -->
+            {{ Form::model($post, array('action' => array('LikesController@newsStore', $post->id))) }}
+                <button type="submit">
+                    + いいね {{ $post->likes_count }}
+                </button>
+       {!! Form::close() !!}
+       @endif
+       @endif
                 <hr color="#c0c0c0">
                 @endforeach
             </div>
         </div>
     </div>
     </div>
-    
+       
 @endsection

@@ -9,8 +9,10 @@ use App\News;
 
 class LikesController extends Controller
 {
-    public function store(Request $request, $newsId)
+    public function newsStore(Request $request)
     {
+        $newsId = $request->input('newsId');
+        \Log::debug(__LINE__.' '.__FILE__.' newsId '.$newsId);
         Like::create(
           array(
             'user_id' => Auth::user()->id,
@@ -21,14 +23,14 @@ class LikesController extends Controller
         $news = News::findOrFail($newsId);
 
         return redirect()
-             ->action('NewsController', $news->id);
+             ->action('NewsController@index', $news->id);
     }
 
-    public function destroy($newsId, $likeId) {
+    public function newsDestroy($newsId, $likeId) {
       $news = News::findOrFail($newsId);
       $news->like_by()->findOrFail($likeId)->delete();
 
       return redirect()
-             ->action('NewsController', $news->id);
+             ->action('NewsController@index', $news->id);
     }
 }

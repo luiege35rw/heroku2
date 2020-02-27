@@ -48,7 +48,7 @@
                 <div class="menu1"> <a class="nav-link"href="admin/news"><button class="pink "><i class="fas fa-comment-dots"></i>NEWS投稿</button></a></div>
                 <div class="menu1"> <a class="nav-link"href="profile"><button class="pink "><i class="fas fa-comment-dots"></i>PRトップ</button></a></div>
                 <div class="menu1"> <a class="nav-link"href="admin/profile"><button class="pink "><i class="fa fa-car"></i>PRベース</button></a></div>
-                <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</div>
+                <div class="menu2"> <form method="GET" action="{{ route('register') }}"><button class="pink "><i class="fas fa-registered"></i>ログINOUT</form></div>
                 <div class="menu2"> <a class="nav-link" href="/info/index.html"><button class="pink "><i class="fas fa-key"></i>INFO一覧</button></a></div>
         　 
            </div>     
