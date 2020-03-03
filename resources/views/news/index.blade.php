@@ -69,6 +69,7 @@
     
         @if (Auth::check())
         @if ($like)
+        <!-- いいねフォーム -->
        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
            @csrf
             <input type="hidden" name="newsId" value="{{ $headline->id }}">
@@ -77,7 +78,7 @@
                 </button>
              </form>
         @else
-             <!-- いいねフォーム -->
+             <!-- いいね取り消しフォーム -->
              
        @endif
        @endif
@@ -154,19 +155,17 @@
     
         @if (Auth::check())
         @if ($like)
-            <!-- いいね取り消しフォーム -->
-            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $post->id]) }}
-                <button type="submit">
-                    ♡ いいね {{ $post->likes_count }}
-                </button>
-        {!! Form::close() !!}
-        @else
-             <!-- いいねフォーム -->
-            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $post->id]) }}
-                <button type="submit">
+        <!-- いいねフォーム -->
+       <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
+           @csrf
+            <input type="hidden" name="newsId" value="{{ $post->id }}">
+                <button type ="submit">
                     + いいね {{ $post->likes_count }}
                 </button>
-       {!! Form::close() !!}
+             </form>
+        @else
+             <!-- いいね取り消しフォーム -->
+            
        @endif
        @endif
                 <hr color="#c0c0c0">
