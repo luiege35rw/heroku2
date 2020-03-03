@@ -11,14 +11,17 @@ class LikesController extends Controller
 {
     public function newsStore(Request $request)
     {
-        $newsId = $request->input('newsId');
+        // dd($request->newsId);
+        $newsId = $request->newsId;
         \Log::debug(__LINE__.' '.__FILE__.' newsId '.$newsId);
-        Like::create(
+        
+          Like::create(
           array(
             'user_id' => Auth::user()->id,
             'news_id' => $newsId
           )
         );
+        
 
         $news = News::findOrFail($newsId);
 

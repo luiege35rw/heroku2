@@ -69,19 +69,16 @@
     
         @if (Auth::check())
         @if ($like)
-            <!-- いいね取り消しフォーム -->
-            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $headline->news_id]) }}
-                <button type="submit">
-                    ♡ いいね {{ $headline->likes_count }}
-                </button>
-        {!! Form::close() !!}
-        @else
-             <!-- いいねフォーム -->
-            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $headline->news_id]) }}
-                <button type="submit">
+       <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
+           @csrf
+            <input type="hidden" name="newsId" value="{{ $headline->id }}">
+                <button type ="submit">
                     + いいね {{ $headline->likes_count }}
                 </button>
-       {!! Form::close() !!}
+             </form>
+        @else
+             <!-- いいねフォーム -->
+             
        @endif
        @endif
              
@@ -153,19 +150,19 @@
                     {{ str_limit($post->profile->introduction, 1500) }}
              </div>
              
-                     <!--いいね画面追加-->
+                      <!--いいね画面追加-->
     
         @if (Auth::check())
         @if ($like)
             <!-- いいね取り消しフォーム -->
-            {{ Form::model($post, array('action' => array('LikesController@newsDestroy', $post->id))) }}
+            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $post->id]) }}
                 <button type="submit">
                     ♡ いいね {{ $post->likes_count }}
                 </button>
         {!! Form::close() !!}
         @else
              <!-- いいねフォーム -->
-            {{ Form::model($post, array('action' => array('LikesController@newsStore', $post->id))) }}
+            {{ Form::open(['url'=> '/news/likes' , 'newsId' => $post->id]) }}
                 <button type="submit">
                     + いいね {{ $post->likes_count }}
                 </button>
