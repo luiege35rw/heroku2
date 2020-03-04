@@ -161,18 +161,25 @@
                       <!--いいね画面追加-->
     
         @if (Auth::check())
+        news_id={{$post->profile->id}}
         @if ($like)
         <!-- いいねフォーム -->
        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
            @csrf
-            <input type="hidden" name="newsId" value="{{ $post->id }}">
-                <button type ="submit">
+               <input type="hidden" name="newsId" value="{{ $post->profile->id }}">
+                    <button type ="submit">
                     + いいね {{ $post->likes_count }}
-                </button>
-             </form>
+                    </button>
+        </form>
         @else
              <!-- いいね取り消しフォーム -->
-            
+        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
+            @csrf
+                <input type="hidden" name="newsId" value="{{ $headline->profile->id }}">
+                    <button type ="submit">
+                    ♡ いいね {{ $headline->likes_count }}
+                    </button>
+       </form>  
        @endif
        @endif
                 <hr color="#c0c0c0">
