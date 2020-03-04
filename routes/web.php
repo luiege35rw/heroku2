@@ -44,8 +44,8 @@ Route::get('info/css/style.css', function () {
      
      //いいね機能
      
-Route::post('/news/likes', 'LikesController@newsStore');
-Route::post('/news/likes/{like}', 'LikesController@newsDestroy');
+Route::post('/news/likes/store', 'LikesController@newsStore');
+Route::post('/news/likes/destroy', 'LikesController@newsDestroy');
 
 Route::post('/profile/likes', 'LikesController@profileStore');
 Route::post('/profile/likes/{like}', 'LikesController@profileDestroy');

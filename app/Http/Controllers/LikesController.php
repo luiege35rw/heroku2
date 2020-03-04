@@ -13,7 +13,7 @@ class LikesController extends Controller
     {
         // dd($request->newsId);
         $newsId = $request->newsId;
-        \Log::debug(__LINE__.' '.__FILE__.' newsId '.$newsId);
+        // \Log::debug(__LINE__.' '.__FILE__.' newsId '.$newsId);
         
           Like::create(
           array(
@@ -29,11 +29,15 @@ class LikesController extends Controller
              ->action('NewsController@index', $news->id);
     }
 
-    public function newsDestroy($newsId, $likeId) {
-      $news = News::findOrFail($newsId);
-      $news->like_by()->findOrFail($likeId)->delete();
-
+    public function newsDestroy(Request $request) {
+        $newsId = $request->newsId;
+        \DB::table('likes')
+          ->where('user_id', Auth::user()->id)
+          ->where('news_id', $newsId)->delete();
+    
+  \Log::debug(__LINE__.' '.__FILE__.'====================');
+  
       return redirect()
-             ->action('NewsController@index', $news->id);
+             ->action('NewsController@index');
     }
 }
