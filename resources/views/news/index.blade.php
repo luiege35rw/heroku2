@@ -85,11 +85,6 @@
        <input type="hidden" name="newsId" value="{{ $headline->profile->id }}">
            <button type ="submit">
             - いいね {{ $headline->likes_count }}
-            <div class="alert alert-primary" role="alert">
-
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" class="delete" value="削除">
-            </div>
            </button>
        </form>     
        @endif
@@ -188,18 +183,15 @@
                 <input type="hidden" name="newsId" value="{{ $post->profile->id }}">
                     <button type ="submit">
                     - いいね {{ $post->likes_count }}
-                   <!--   <input type="hidden" name="_method" value="DELETE">-->
-                　　　<!--<input type="submit" class="delete" value="削除">-->
                     </button>
        </form>  
        @endif
        @endif
        
-       <!-- 記事描画部分 -->
+       <!--削除ボタン表示 -->
      @if(isset(($posts)) > 0)
         @foreach($posts as $post)
             <div class="alert alert-primary" role="alert">
-                <!--削除ボタン表示 -->
                 <form action="/post/{{ $post->id }}" method="POST">
                     {{ csrf_field() }}
                         <button type ="submit">
@@ -210,7 +202,16 @@
             </div>   
         @endforeach
     @else
-        <!--<div>投稿記事がありません</div>-->
+    
+        <div class="alert alert-primary" role="alert">
+                <form action="{{ action('LikesController@newsDestroy') }}" method="post" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                        <button type ="submit">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="submit" class="delete" value="削除">
+                        </button>
+               </form>
+            </div>   
     @endif
         
                 <hr color="#c0c0c0">
