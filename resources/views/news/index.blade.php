@@ -68,7 +68,7 @@
                      <!--いいね画面追加-->
     
         @if (Auth::check())
-        news_id={{$headline->profile->id}}
+        news_id={{$headline->profile->id}} \ count={{$like[$headline->profile->id]}} 
         @if ($like[$headline->profile->id])
         <!-- いいねフォーム-->
         <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
@@ -161,13 +161,10 @@
                       <!--いいね画面追加-->
     
         @if (Auth::check())
-        news_id={{$post->profile->id}} / 
+        news_id={{$post->profile->id}} 
         
-        <!--@if (is_array($like[$post->profile->id]))-->
-        <!--count={{count($like[$post->profile->id])}}-->
-        <!--@endif-->
+        @if (!isset($like[$post->profile->id]))
         
-        @if ($post->likes_count == 0)
         <!-- いいねフォーム -->
        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
            @csrf
@@ -188,33 +185,28 @@
        @endif
        @endif
        
-       <!--削除ボタン表示 -->
-     @if(isset(($posts)) > 0)
-        @foreach($posts as $post)
-            <div class="alert alert-primary" role="alert">
-                <form action="/post/{{ $post->id }}" method="POST">
-                    {{ csrf_field() }}
-                        <button type ="submit">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="submit" class="delete" value="削除">
-                        </button>
-               </form>
-            </div>   
-        @endforeach
-    @else
+     <!--削除ボタン表示 -->
+    <!--@if ($post->likes_count >0)-->
+    <!--        <div class="alert alert-primary" role="alert">-->
+    <!--            <form action="/post/{{ $post->id }}" method="POST">-->
+    <!--                {{ csrf_field() }}-->
+    <!--                    <button type ="submit">-->
+    <!--                        <input type="hidden" name="_method" value="DELETE">-->
+    <!--                        <input type="submit" class="delete" value="削除">-->
+    <!--                    </button>-->
+    <!--           </form>-->
+    <!--        </div>   -->
+    <!--@else-->
     
         <div class="alert alert-primary" role="alert">
-                <form action="{{ action('LikesController@newsDestroy') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('LikesController@newsDestroy') }}" method="post">
                     {{ csrf_field() }}
-                        <button type ="submit">
-                            <input type="hidden" name="_method" value="DELETE">
                             <input type="submit" class="delete" value="削除">
-                        </button>
+                        
                </form>
             </div>   
-    @endif
-        
-                <hr color="#c0c0c0">
+    @endif    
+            <hr color="#c0c0c0">
                 @endforeach
             </div>
         </div>

@@ -20,14 +20,20 @@ class LikesController extends Controller
         // \Log::debug(__LINE__.' '.__FILE__.' newsId '.$newsId);
         
         $arr = ['user_id' => Auth::user()->id,'news_id' => $newsId];
-        if (Like::where($arr)->count() > 0) {
+        
+        $count = Like::where($arr)->count();
+        
+        \Log::info('count =' .$count);
+        
+        if ($count > 0) {
            return redirect()->action('NewsController@index', $newsId);
         }
-          Like::updateOrCreate(
-          array(
-            'user_id' => Auth::user()->id,
-            'news_id' => $newsId
-          )
+        
+        Like::updateOrCreate(
+            array(
+                'user_id' => Auth::user()->id,
+                'news_id' => $newsId
+            )
         );
         
 
