@@ -37,10 +37,10 @@ class LikesController extends Controller
         );
         
 
-        $news = News::findOrFail($newsId);
+        // $news = News::findOrFail($newsId);
         
         return redirect()
-             ->action('NewsController@index', $news->id);
+             ->action('NewsController@index');
     }
 
     public function newsDestroy(Request $request) 

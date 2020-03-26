@@ -26,6 +26,7 @@
         <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
         @if($pagename === 'news')
         <link href="{{ secure_asset('css/front_news.css') }}" rel="stylesheet">
+        <script src="{{ secure_asset('js/good.js') }}" defer></script>
         @endif
         <!--FontAwesome5を使う--->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">

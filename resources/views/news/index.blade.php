@@ -68,23 +68,25 @@
                      <!--いいね画面追加-->
     
         @if (Auth::check())
-        news_id={{$headline->profile->id}} \ count={{$like[$headline->profile->id]}} 
-        @if ($like[$headline->profile->id])
+        news_id={{$headline->profile->id}} \ 
+        @if (!isset($like[$headline->profile->id]))
+        
+        
         <!-- いいねフォーム-->
         <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
             @csrf
         <input type="hidden" name="newsId" value="{{ $headline->profile->id }}">
-            <button type ="submit">
-                    ♡ いいね {{ $headline->likes_count }}
+            <button type="submit">
+                    ♡+いいね追加 {{ $headline->likes_count }}
             </button>
         </form>
         @else
              <!-- いいね取り消しフォーム -->
-       <form action="{{ action('LikesController@newsDesroy') }}" method="post" enctype="multipart/form-data">
+       <form action="{{ action('LikesController@newsDestroy') }}" method="post" enctype="multipart/form-data">
            @csrf
        <input type="hidden" name="newsId" value="{{ $headline->profile->id }}">
-           <button type ="submit">
-            - いいね {{ $headline->likes_count }}
+           <button type="submit">
+            - いいね削除 {{ $headline->likes_count }}
            </button>
        </form>     
        @endif
@@ -169,8 +171,8 @@
        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
            @csrf
                <input type="hidden" name="newsId" value="{{ $post->profile->id }}">
-                    <button type ="submit">
-                    ♡ いいね {{ $post->likes_count }}
+                    <button type="submit">
+                    ♡+いいね追加 {{ $post->likes_count }}
                     </button>
         </form>
         @else
@@ -178,8 +180,8 @@
         <form action="{{ action('LikesController@newsDestroy') }}" method="post" enctype="multipart/form-data">
             @csrf
                 <input type="hidden" name="newsId" value="{{ $post->profile->id }}">
-                    <button type ="submit">
-                    - いいね {{ $post->likes_count }}
+                    <button type="submit">
+                    - いいね削除 {{ $post->likes_count }}
                     </button>
        </form>  
        @endif

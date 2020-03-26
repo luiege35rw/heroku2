@@ -21,5 +21,5 @@ class Like extends Model
     public function news()
     {
       return $this->belongsTo('App\News');
-}
+    }
 }
