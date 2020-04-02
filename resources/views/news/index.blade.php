@@ -68,7 +68,7 @@
                      <!--いいね画面追加-->
     
         @if (Auth::check())
-        news_id={{$headline->profile->id}} \ 
+        <!--news_id={{$headline->profile->id}} \ -->
         @if (!isset($like[$headline->profile->id]))
         
         
@@ -163,12 +163,12 @@
                       <!--いいね画面追加-->
     
         @if (Auth::check())
-        news_id={{$post->profile->id}} 
+        <!--news_id={{$post->profile->id}} -->
         
         @if (!isset($like[$post->profile->id]))
         
         <!-- いいねフォーム -->
-       <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ action('LikesController@newsStore') }}" method="post" enctype="multipart/form-data">
            @csrf
                <input type="hidden" name="newsId" value="{{ $post->profile->id }}">
                     <button type="submit">
@@ -183,31 +183,13 @@
                     <button type="submit">
                     - いいね削除 {{ $post->likes_count }}
                     </button>
-       </form>  
-       @endif
-       @endif
-       
-     <!--削除ボタン表示 -->
-    <!--@if ($post->likes_count >0)-->
-    <!--        <div class="alert alert-primary" role="alert">-->
-    <!--            <form action="/post/{{ $post->id }}" method="POST">-->
-    <!--                {{ csrf_field() }}-->
-    <!--                    <button type ="submit">-->
-    <!--                        <input type="hidden" name="_method" value="DELETE">-->
-    <!--                        <input type="submit" class="delete" value="削除">-->
-    <!--                    </button>-->
-    <!--           </form>-->
-    <!--        </div>   -->
-    <!--@else-->
-    
-        <div class="alert alert-primary" role="alert">
-                <form action="{{ action('LikesController@newsDestroy') }}" method="post">
-                    {{ csrf_field() }}
-                            <input type="submit" class="delete" value="削除">
-                        
-               </form>
-            </div>   
-    @endif    
+        </form>  
+        <form action="#" method="post">
+            <input type="button" value="いいね追加" class="btn btn-good">
+        </form>
+        @endif
+        @endif
+
             <hr color="#c0c0c0">
                 @endforeach
             </div>

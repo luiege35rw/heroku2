@@ -50,6 +50,10 @@ Route::post('/news/likes/destroy', 'LikesController@newsDestroy');
 Route::post('/profile/likes', 'LikesController@profileStore');
 Route::post('/profile/likes/{like}', 'LikesController@profileDestroy');
 
+//いいね機能Ajax
+Route::post('/api/ajaxGood', 'AjaxLikesController@newsStore');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

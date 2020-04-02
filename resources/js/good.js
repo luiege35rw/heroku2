@@ -1,5 +1,5 @@
 $(function(){
-    alert('good.js');
+    console.log(' =================== ');
     var $good = $('.btn-good'), //いいねボタンセレクタ
                 goodPostId; //投稿ID
     
@@ -11,7 +11,7 @@ $(function(){
         goodPostId = $this.parents('.post').data('postid'); 
         $.ajax({
             type: 'POST',
-            url: 'ajaxGood.php', //post送信を受けとるphpファイル
+            url: '/api/ajaxGood', //post送信を受けとるphpファイル
             data: { postId: goodPostId} //{キー:投稿ID}
         }).done(function(data){
             console.log('Ajax Success');
@@ -26,6 +26,7 @@ $(function(){
             $this.toggleClass('active');
         }).fail(function(msg) {
             console.log('Ajax Error');
+            console.log(msg);
         });
     });
 });

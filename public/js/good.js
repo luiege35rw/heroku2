@@ -94,7 +94,7 @@
 /***/ (function(module, exports) {
 
 $(function () {
-  alert('good.js');
+  console.log(' =================== ');
   var $good = $('.btn-good'),
       //いいねボタンセレクタ
   goodPostId; //投稿ID
@@ -107,7 +107,7 @@ $(function () {
     goodPostId = $this.parents('.post').data('postid');
     $.ajax({
       type: 'POST',
-      url: 'ajaxGood.php',
+      url: '/api/ajaxGood',
       //post送信を受けとるphpファイル
       data: {
         postId: goodPostId
@@ -127,6 +127,7 @@ $(function () {
       $this.toggleClass('active');
     }).fail(function (msg) {
       console.log('Ajax Error');
+      console.log(msg);
     });
   });
 });
