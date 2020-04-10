@@ -107,6 +107,9 @@ $(function () {
     goodPostId = $this.parents('.post').data('postid');
     $.ajax({
       type: 'POST',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
       url: '/api/ajaxGood',
       //post送信を受けとるphpファイル
       data: {

@@ -53,6 +53,8 @@ Route::post('/profile/likes/{like}', 'LikesController@profileDestroy');
 //いいね機能Ajax
 Route::post('/api/ajaxGood', 'AjaxLikesController@newsStore');
 
+// Route::match(['get', 'post'],'/api/ajaxGood', 'AjaxLikesController@newsStore');
+
 
 Auth::routes();
 
