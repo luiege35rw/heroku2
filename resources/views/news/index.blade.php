@@ -186,7 +186,9 @@
         </form>  
         <form action="#" method="post">
             <input type="button" value="いいね追加" class="btn btn-good">
+            <i class="fas fa-heart"></i>
         </form>
+        <div class="ajax-iine" data-pid="goodkey" data-tid="tpl-sb-bulge-green"></div>
         @endif
         @endif
 
