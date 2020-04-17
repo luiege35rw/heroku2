@@ -171,7 +171,7 @@
                       <!--いいね画面追加-->
     
         @if (Auth::check())
-        <!--news_id={{$post->profile->id}} -->
+         <!--news_id={{$post->profile->id}} -->
         
         @if (!isset($like[$post->profile->id]))
         
