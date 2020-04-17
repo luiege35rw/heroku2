@@ -196,8 +196,8 @@
                     - いいね削除 {{ $post->likes_count }}
                     </button>
         </form>  
-        <form action="#" method="post">
-            <input type="button" value="いいね追加" class="btn btn-good">
+        <form action="{{ action('AjaxLikesController@newsStore') }}" method="post">
+            <input type="button" value="いいね追加" class="btn btn-good" data-newsid="{{ $post->profile->id }}">
             <i class="fas fa-heart"></i>
         </form>
         @endif

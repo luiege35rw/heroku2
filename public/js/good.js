@@ -102,9 +102,10 @@ $(function () {
   var mode = 'add';
   $good.on('click', function (e) {
     e.stopPropagation();
-    var $this = $(this); //カスタム属性（postid）に格納された投稿ID取得
-
-    goodPostId = $this.parents('.post').data('postid');
+    var $this = $(this);
+    var news_id = $(this).data('newsid');
+    console.log('newsid = ' + news_id);
+    console.log('===================');
     $.ajax({
       type: 'POST',
       headers: {
@@ -113,7 +114,7 @@ $(function () {
       url: '/api/ajaxGood',
       //post送信を受けとるphpファイル
       data: {
-        postId: goodPostId
+        'news_id': news_id
       } //{キー:投稿ID}
 
     }).done(function (data) {
