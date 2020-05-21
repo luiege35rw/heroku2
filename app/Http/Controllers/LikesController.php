@@ -25,14 +25,14 @@ class LikesController extends Controller
         
         \Log::info('count =' .$count);
         
-        if ($count > 0) {
+        if ($count >= 0) {
            return redirect()->action('NewsController@index', $newsId);
         }
         
         Like::updateOrCreate(
             array(
                 'user_id' => Auth::user()->id,
-                'news_id' => $newsId->withDefault()
+                'news_id' => $newsId
             )
         );
         
