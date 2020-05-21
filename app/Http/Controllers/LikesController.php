@@ -32,15 +32,11 @@ class LikesController extends Controller
         Like::updateOrCreate(
             array(
                 'user_id' => Auth::user()->id,
-                'news_id' => $newsId
+                'news_id' => $newsId->withDefault()
             )
         );
         
-
-        // $news = News::findOrFail($newsId);
-        
-        return redirect()
-             ->action('NewsController@index');
+            return redirect()->action('NewsController@index');
     }
 
     public function newsDestroy(Request $request) 
