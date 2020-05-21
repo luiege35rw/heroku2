@@ -25,7 +25,7 @@ class LikesController extends Controller
         
         \Log::info('count =' .$count);
         
-        if ($count >= 0) {
+        if ($count > 0) {
            return redirect()->action('NewsController@index', $newsId);
         }
         

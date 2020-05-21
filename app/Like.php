@@ -11,8 +11,7 @@ class Like extends Model
 
     public $counterCacheOptions = [
         'News' => [
-            'field' => 'likes_count',
-            'foreignKey' => 'news_id'
+            'field' => 'likes_count', 'news_id'
         ]
     ];
 
