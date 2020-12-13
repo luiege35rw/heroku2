@@ -48,4 +48,3 @@
 # Author
 
 <p>* luiege35rw</p>
-<p>*  luiege35rw@yahoo.co.jp</p>
